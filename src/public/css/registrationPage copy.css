@@ -8,85 +8,92 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #006f97;
 } */
-/* .divForm_register {
+.divForm_register {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-} */
-.divForm_login .retornHome_login{
-    color: aliceblue;
-    margin: 3px;
-    text-decoration: revert;
-    font-style: oblique;
 }
-.divForm_login .subtituloRegistro{
+/* body {
     display: flex;
-    align-items: baseline;
-    font-size: larger;
-}
-
-.input_register {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+    
+}  */
+/* .form_login{
+    display: flex;  
+    flex-direction: column;
+    background-color: bisque;
+    background-color: var(--color-1);
+    border: solid 2px #006f97;
+    box-shadow: 1%;
+    width: min-content;
+    padding: 3%;
+    border-radius: 6px;
+} */
+/* 
+.omarinput {
     width: 250px;
-    border-radius: 4px;
-    margin-bottom: 2%;
-    padding: 1% 3%;
+    border-radius: 4%;
+    margin-bottom: 2px;
+    padding-left: 6px;
     transition: 2s;
 }
-.input_register:hover {
+.omarinput:hover {
     width: 240px;
     height: 33px;
     /* box-shadow: 0 5px 5px var(--color-4); */
+/* 
 }
-.subtitulo_registro{    
+.subtitulo {    
     display: flex;
     align-items: center;
 }
-.box-1_egistro, .box-2_registro {
+.box-1, .box-2 {
     display: flex;
     flex-direction: column;
     align-items: baseline;
 }
-.condiciones_registro {
+.condiciones {
     display: flex;
     font-size: 11px;
     flex-direction: column;
     padding: 2px;
 }
-.condiciones_registro .checkbox {
+.condiciones .checkbox {
     display: flex;
     align-items: center;
     padding-left: 1%;
 }
-.condiciones_registro label {
+.condiciones label {
     display: flex;
     align-items: center;
     padding-left: 1%;
 }
-.condiciones_registro .checkbox .checkbox-in {
+.condiciones .checkbox .checkbox-in {
     width: 11px;
 }
-.boton_registro {
+.boton {
     display: flex;
     justify-content: center;
 }
-.boton_registro .boton-boton {
+.boton .boton-boton {
     margin: 2px;
     border-radius: 4px;
+}
+button {
     width: 39%;
     border-radius: 0;
     transition: 1s;
-    border-radius: 4px;
-    padding: 1% 3%;
 }
-/* .boton-boton {
-} */
-.boton-boton:hover {
-    background-color: #006f97;
+button:hover {
+    background-color: var(--color-4);
     color: rgb(255, 255, 255);
     font-weight: bold;
 }
-.redes_registro .redes-boton {
+.redes .redes-boton {
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -96,17 +103,16 @@
     transition: 1s;
     padding: 6px;
 }
-.redes_registro .redes-boton:hover {
-    background-color: #006f97;
+.redes .redes-boton:hover {
+    background-color: var(--color-4);
     color: rgb(255, 255, 255);
     font-weight: bold;
 }
-.redes_registro .redes-boton .redes-boton-2:hover {
-    background-color: #006f97;
+.redes .redes-boton .redes-boton-2:hover {
+    background-color: var(--color-4);
     color: rgb(255, 255, 255);
     font-weight: bold;
 }
-/* 
 
 @media (min-width: 992px) {
     h2 {

@@ -4,9 +4,9 @@
 
 /* Imports */
 
-@import url('loginPage.css');
 /* @import url('productDetail.css'); */
-/* @import url('registrationPage.css'); */
+@import url('loginPage.css');
+@import url('registrationPage.css');
 @import url('header.css');
 @import url('variables.css');
 /* @import url('general.css'); */
