@@ -56,15 +56,13 @@
 .cuadroImgBig{
     width: 250px;
     height: 250px;
-    border: solid 2px;
-    /* background-color: rgb(216, 216, 216);
-    border: solid 2px #858585; */  
+    box-shadow: 0 0px 5px #006797;
 }
 
 .cuadroImg {
     width: 116px;
     height: 116px;
-    border: solid 2px;
+    box-shadow: 0 0px 5px #006797;
 }
 .cuadroImgSmall{
     width: 116px;
@@ -115,11 +113,13 @@
     display: flex;
     justify-content: center;
 }
-.descripcion {
+.descripcion_detalle {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    color: aliceblue;
+    padding: 1% 6%;
 }
 .descripcion .detalle {
     display: flex;
@@ -138,7 +138,7 @@
 }
 
 
-/* @media (min-width: 892px) {
+@media (min-width: 892px) {
     .ImgCar_detalle {
         display: flex;
         flex-direction: row;
@@ -164,4 +164,4 @@
         justify-content: center;
     }  
 } 
-  */
+ 
