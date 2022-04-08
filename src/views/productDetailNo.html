@@ -1,70 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- Titulo -->
-    <title>Detalle de Producto</title>
-  </head>
+        
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Stylesheet CSS -->
+    <!-- <link rel="stylesheet" href="css/productDetail.css"> -->
 
-  <body>
-    <!-- Inicio Header -->
-   <header>
-      <div class="header1"> 
-        <div class="headerLogo"><img src="/img/logo.jpg" alt="Mundo Clasico"></div>
-        <div class="buscador"> 
-          <form action="">
-            <input type="text" placeholder="Buscar productos">
-            <button class="headerbuscar">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>   
-        </div> 
-        <div class="movil">
-          <input type="checkbox" id="btn_menu">
-          <label for="btn_menu" class="btn_menu">
-            <span id="btn_span_1" class="btn_span"></span>
-            <span id="btn_span_2" class="btn_span"></span>
-            <span id="btn_span_3" class="btn_span"></span>
-          </label>
-          <div class="container_flex">
-          <nav>
-            <ul class="ul_detalle" class="headerContainer_menu"><!--  flex_column -->
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Ofertas </a></li>
-              <li><a href="#">Carrito</a></li>
-              <li><a href="#">Contacto</a></li>
-            </ul class="ul_detalle">
-          </nav>
-        </div>
-      </div>   
-    </header>
-    <!-- Fin Header -->
-    <br>
-    <!-- Inicio Detalle de Producto -->
+    <title>Detalle de Producto</title>
+
+</head>
+<body>
     
 
-
-
-
-
-    <div class="divSection_detalle">
-      <section class="section_detalle">
+    <section class="section_detalle">
         <!-- Titulo del producto -->
         <div>
-            <h1 class="titulo_detalle">Adhesivo Sintetico Voligoma 30g.</h1>      
+            <h1>Adhesivo Sintetico Voligoma 30g.</h1>      
+
         </div>
         <div class="ImgCar_detalle">
         <!-- Cuadro de producto Img-->
             <article class="cuadroProducto">
-  
+
                 <div class="container-cuadroImg" width>
                     <img class="cuadroImgBig" src="/img/10VOLIGOMADE30.png" alt="Voligoma">
                 </div>
-  
+
                 <div class="cuadroProductoSmall">
                     <div class="cuadroImgSmall">
                         <img class="cuadroImg" src="/img/10VOLIGOMADE30.png" alt="Voligoma">
@@ -73,12 +41,12 @@
                         <img class="cuadroImg" src="/img/10VOLIGOMADE30.png" alt="Voligoma">
                     </div>    
                 </div>
-  
+
             </article>  
-  
+
         <!-- Detalle de Producto -->
             <div class="car_detalle">
-                <ul class="ul_detalle">
+                <ul>
                     <li>
                         <div class="containerCar-center">
                             <p>Los Precios Incluyen IVA</p>
@@ -110,7 +78,7 @@
                            </h5>
                         </div>
                     </li>
-                </ul">
+                </ul>
             </div>
             <!-- Caracteristicas -->
         </div>
@@ -161,39 +129,9 @@
           </div>
     </section>
 
-    </div>
-
-
-    <!-- Fin Detalle de producto -->
-    <br>
-    <!-- Inicio del Footer -->
-    <footer>
-      <strong><p class="footerContactOli">contactanos</p></strong> 
-      <div id="foot-wrapper">
-        <div class="footer-limit" id="footer-limit">
-          <div class="footer no-items section" id="footer-1"></div>
-        </div>
-      </div>
-      <div id="sosmedup">
-        <div class="footer-social section" id="Postwidegt2" name="Footer Social Links">
-          <div class="widget LinkList" data-version="1" id="LinkList100">
-            <div class="widget-content">
-              <ul>
-                <li><a href="https://www.facebook.com/" rel="nofollow noopener" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                <li><a href="https://www.instagram.com" rel="nofollow noopener" target="_blank"><i id="instagram" class="fa fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/" rel="nofollow noopener" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-                <li><a href="https://twitter.com/" rel="nofollow noopener" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.blogger.com/follow.g?view=FOLLOW&amp;blogID=2890810791308488435" rel="nofollow noopener" target="_blank" title="Follow us on Blogger"><i class="fa fa-user"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="creditfooter">
-        <p> Copyright ©202, Mundo Clàsico, All Rights Reserved</p>
-      </div>       
-    </footer>
-    <!-- Fin del Footer -->
-    <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>
-  </body>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <!-- <script src="js/header.js"></script> -->
+</body>
 </html>

@@ -4,7 +4,7 @@
 
 /* Imports */
 
-/* @import url('productDetail.css'); */
+@import url('productDetail.css');
 @import url('loginPage.css');
 @import url('registrationPage.css');
 @import url('header.css');
