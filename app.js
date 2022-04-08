@@ -18,7 +18,7 @@ app.get('/registro', (req, res) => {
 
 //Ruta index
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/src/views/index.html')
+  res.sendFile(__dirname + '/src/views/header.html')
 })
 //Ruta login
 

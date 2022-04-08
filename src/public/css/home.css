@@ -1,24 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-}
-:root{
+/* :root{ */
     /* --celeste-degrade2: #E3FDFD;
     --celeste-degrade: #CBF1F5;
     --celeste-claro: #A6E3E9;*/
-    --celeste: linear-gradient(to right, #71C9CE, #0e7e7ee1);  
-    --celeste-claro: linear-gradient(to right, #71C9CE, #A6E3E9);
+    /* --celeste: linear-gradient(to right, #71C9CE, #0e7e7ee1);   */
+    /* --celeste-claro: linear-gradient(to right, #71C9CE, #A6E3E9); */
     /*  background: #1fa2ff; */ /* fallback for old browsers */
     /* background: -webkit-linear-gradient(to left, #1fa2ff, #12d8fa, #a6ffcb); */ /* Chrome 10-25, Safari 5.1-6 */
     /* background: linear-gradient(to left, #1fa2ff, #12d8fa, #a6ffcb); */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /* background: linear-gradient(to left, #1c92d2, #f2fcfe); */
-    background: linear-gradient(to left, #1f1c2c, #928dab);
-
-  }
+    /* background: linear-gradient(to left, #1f1c2c, #928dab); */
+  /* } */
 
   header {
     width: 100%;
