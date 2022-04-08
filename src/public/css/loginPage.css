@@ -1,0 +1,112 @@
+
+:root {
+    --color-4: #23b3e8;
+    --color-3: #A6E3E9;
+    --color-2: #CBF1F5;
+    --color-1: #E3FDFD;
+}
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #006f97;
+    
+}
+body {
+    /* background-color: var(--color-1); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+    
+} 
+form{
+    display: flex;  
+    flex-direction: column;
+    background-color: bisque;
+    background-color: var(--color-1);
+    border: solid 2px #006f97;
+    box-shadow: 1%;
+    width: min-content;
+    padding: 3%;
+    border-radius: 6px;
+}
+.portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 31px;
+}
+.fa-solid {
+    height: 62px;
+    margin-top: 0.5rem;
+}
+input {
+    width: 250px;
+    border-radius: 4%;
+    margin-bottom: 2px;
+    padding-left: 6px;
+    transition: 1s;
+}
+input:hover {
+    width: 240px;
+    height: 33px;
+}
+
+.subtitulo {
+    display: flex;
+    align-items: center;
+}
+.box-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.enviar {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 3%;
+}
+.recording {
+    font-size: 12px;
+}
+.enviar button {
+    border-radius: 4px  ;   
+    transition: 1s; 
+}
+
+.enviar button:hover {
+    background-color: var(--color-4);
+    color: white;
+    font-weight: bold;
+    
+}
+.redes .redes-boton {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    width: 250px;
+    border-radius: 4px;
+    margin: 2px;
+    transition: 1s;
+}
+.redes .redes-boton:hover {
+    background-color: var(--color-4);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+label {
+    transition: 1s;
+}
+.redes .redes-boton .redes-boton-2:hover {
+    background-color: var(--color-4);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+    /* h2 {
+        font-size: 30px;
+    } */
+}

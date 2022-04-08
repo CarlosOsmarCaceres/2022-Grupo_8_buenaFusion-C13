@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Stylesheet CSS -->
+    <link rel="stylesheet" href="css/registrationPage.css">
+</head>
+
+<body>
+
+  <!-- HEADER FRANCO -->
+  <header class="fco_header" >
+    <div class="fco_container1"> 
+       <div class="fco_Logo"><img class="fco_img"src="img/logo.jpg" alt="Mundo Clasico"></div>
+       <div class="buscador"> 
+        <form class="fco_form" action="">
+          <input class="fco_input" type="text" placeholder="Buscar productos">
+          <button class="fco_buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>   
+      </div> 
+      <div class="fco_movil">
+        <input type="checkbox" id="btn_menu">
+        <label for="btn_menu" class="btn_menu fco_flex_column">
+          <span id="btn_span_1" class="btn_span"></span>
+          <span id="btn_span_2" class="btn_span"></span>
+          <span id="btn_span_3" class="btn_span"></span>
+        </label>
+        <div class="container_flex">
+          <nav>
+            <ul class="container_menu fco_flex_column">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Ofertas </a></li>
+              <li><a href="#">Carrito</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>   
+  </header> 
+
+  <!-- BODY OMAR -->
+    <title>Pagina de registro</title>
+
+    <a href="/login">Regresar al home</a>
+
+    <form class="omarform" action="data.html" method="GET">
+        <div class="subtitulo">
+            <h2>Registrarse</h2>
+            <i class="fa-solid fa-key"></i>
+
+        </div>
+
+        <div class="subtitulo">
+            <i class="fa-solid fa-user"></i>
+            <h2>Datos personales</h2>
+        </div>
+
+        <div class="box-1">
+            <input class="omarinput" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" required>
+            <input class="omarinput" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido" required>
+            <input class="omarinput" type="date" name="fecha" id="fecha" placeholder="Seleccionar fecha" required>
+            <input class="omarinput" type="tel" name="telefono" id="telefono" placeholder="Ingrese su Telefono/Celular" required>
+            <input class="omarinput" type="email" name="email" id="email" placeholder="Correo electronico" required>
+            <input class="omarinput" type="password" name="pass" id="pass" placeholder="Escriba una contraseña" required>  
+        </div>
+
+        <div class="subtitulo">
+            <i class="fa-solid fa-lock"></i>
+            <h2>Registrarse</h2>
+        </div>  
+        <div class="box-2">
+            <input type="password" name="datopass" id="datopass" placeholder="Ingresar contraseña">  
+            <input type="password" name="datorepass" id="datorepass" placeholder="Reingresar su contraseña">
+        </div>  
+        <div class="condiciones">
+            <div class="checkbox">
+                <input class="checkbox-in" type="checkbox" name="pass1" id="promociones" >
+                <label for="promociones">Quiero estar al tanto de neuvas promociones</label>
+            </div>
+            <div class="checkbox">
+                <input class="checkbox-in" type="checkbox" name="pass1" id="terminos" >
+                <label for="terminos">Aceptar terminos y condiciones</label>
+            </div>
+        </div>
+        <div class="boton"> 
+            <button class="boton-boton" type="submit">Enviar</button>
+            <button class="boton-boton" type="reset">Cancelar</button>
+        </div>
+        <div class="redes">
+            <button class="redes-boton" type="button">
+                <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin" 
+                class="fa-brands fa-google">
+                
+                <label class="redes-boton-2" for="google">Continuar con Google</label>
+                </a>
+            </button>
+            <button class="redes-boton" type="button">
+                <a href="https://www.facebook.com/"  class="fa-brands fa-facebook-square">
+                  <label class="redes-boton-2" for="facebook">Continuar con Facebook</label>
+                </a>
+            </button>
+        </div>
+    </form>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <!-- <script src="js/header.js"></script> -->
+</body>
+</html>
