@@ -1,0 +1,90 @@
+
+ /* INICIO DEL HOME */
+ .h2_index {
+   display: flex;
+   justify-content: center;
+   background: var(--celeste-claro);
+  } */
+  
+  
+ /* MAIN */
+ .main_index{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color:var(--background-main);
+   width: 100%;
+  } 
+  
+  
+  /* ---- Carrusel ------ */
+  .slider_index {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider_index .ul_index {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    
+    animation: cambio 20s infinite;
+    animation-direction: alternate; 
+  } 
+  
+  
+  .slider_index li {
+    width: 100%;
+    list-style: none;
+  }
+  
+  .slider_index img {
+    width: 100%;
+    height: 70%;
+  }
+  
+  @keyframes cambio {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+    
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+    
+    75% { margin-left: -300%;}
+    100% { margin-left: -300%;}
+  }
+  
+  .product_index {
+    border: 2px solid black;
+    padding: 5px;
+    
+  }
+  
+  .detalle_index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    
+  }
+  
+  article .precio {
+    color: black;
+  }
+  article .descuento {
+    color: rgb(52, 224, 52);
+  }
+  
+  
+  button_index{
+    display: flex;
+    justify-content: flex-end;
+  }
+  /*  
+  */
+
+ /* FIN DEL HOME */
