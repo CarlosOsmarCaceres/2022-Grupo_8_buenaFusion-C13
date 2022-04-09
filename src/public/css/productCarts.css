@@ -308,6 +308,7 @@ input {
         box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
         background: black;
         color: green;
+        padding: 5px;
     }
 .boton-eliminar {
     width: 70px;
@@ -318,6 +319,7 @@ input {
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
     background: red;
     color: white;
+    padding: 5px;
 }
 
  
