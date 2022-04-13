@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("../partials/head.ejs") %> 
+  <body>
+    <!-- Inicio Header -->
+    <%-include("../partials/header.ejs") %>
+    <!-- Fin Header -->
+    <br>
+    <!-- Inicio Login -->
+    <div class="divForm_login">
+      <form class="form_login" action="data.html" method="GET">
+        <div class="portada">
+          <i class="fa-solid fa-user fa-4x" id="fa-solid_login"></i>
+          <h2>¡BIENVENIDO/A!</h2>
+        </div>
+        <!--  -->
+        <div class="box-1_login">
+          <label for="usuario">Usuario</label>
+          <input class="input_login" type="email" name="email" id="usuario" placeholder="Email o Usuario" required>
+          <label for="pass">Contraseña</label>
+          <input class="input_login" type="password" name="pass" id="pass" placeholder="Ingresar contraseña" required>
+        </div>
+        <!--  -->
+        <div class="enviar_login">
+          <button class="enviar_login-boton" type="submit">Ingresar</button>
+        </div>
+        <!--  -->
+        <a class="recording_login" href="/registro">Olvidé contraseña</a>
+        <!--  -->
+        <div class="redes_login">
+          <button class="redes-boton" type="button">
+            <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="fa-brands fa-google">
+              <label class="redes-boton-2" for="google">Continuar con Google</label>
+            </a>
+          </button>
+          <button class="redes-boton" type="button">
+            <a href="https://www.facebook.com/"  class="fa-brands fa-facebook-square">
+              <label class="redes-boton-2" for="facebook">Continuar con Facebook</label>
+            </a>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Fin Login -->
+    <br>
+    <!-- Inicio del Footer -->
+    <%-include("../partials/footer.ejs")%>
+    <!-- Fin del Footer -->
+    <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>
+  </body>
+</html>
