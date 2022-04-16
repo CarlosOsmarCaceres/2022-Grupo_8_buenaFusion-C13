@@ -4,6 +4,6 @@ const usuarioController = require("../controllers/userController")
 
 
 router.get("/registro", usuarioController.registro) 
-router.get("/logeo", usuarioController.logeo) 
+router.get("/", usuarioController.logeo) 
 
 module.exports= router;
