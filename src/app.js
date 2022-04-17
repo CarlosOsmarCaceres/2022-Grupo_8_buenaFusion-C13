@@ -19,6 +19,7 @@ app.set("views", path.join(__dirname, "views")) /* aca le decimos que si se requ
 const iRouter = require ("./routes/indexRouter"); /*  estamos requiriendo el archivo router */
 const pRouter = require ("./routes/productRouter"); 
 const uRouter = require ("./routes/userRouter"); 
+const aRouter = require ("./routes/adminRouter"); 
 
 
 
@@ -27,6 +28,7 @@ const uRouter = require ("./routes/userRouter");
 app.use("/", iRouter)
 app.use("/producto", pRouter)
 app.use("/usuario", uRouter)
+app.use("/administrador", aRouter)
 
 
 
