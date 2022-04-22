@@ -1,0 +1,46 @@
+[
+    {
+        "id": 0,
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "password": "",
+        "avatar": ""
+    },
+    {
+        "id": 1,
+        "firstName": "Carlos Osmar",
+        "lastName": "Caceres",
+        "email": "omarcaceres@live.com",
+        "password": "carlos123",
+        "avatar": ""
+    },
+    
+    {
+        "id": 2,
+        "firstName": "Franco",
+        "lastName": "Choque",
+        "email": "franco.emanuel.choque@gmail.com",
+        "password": "franco123",
+        "avatar": ""
+    },
+    
+    {
+        "id": 3,
+        "firstName": "Jonatan",
+        "lastName": "Cespedes",
+        "email": "formar.comision13@gmail.com",
+        "password": "jona123",
+        "avatar": ""
+    },
+    
+    {
+        "id": 4,
+        "firstName": "Matias",
+        "lastName": "Lopez",
+        "email": "sebastos23@gmail.com",
+        "password": "mati123",
+        "avatar": ""
+    }
+    
+]
