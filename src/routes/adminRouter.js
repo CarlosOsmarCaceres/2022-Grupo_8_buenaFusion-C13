@@ -5,7 +5,7 @@ const adminProductControllers = require("../controllers/adminProductControllers"
 
 router.get("/", aControllers.index) 
 router.get("/productos/agregar", adminProductControllers.productAdd)
-router.get("/productos/editar", adminProductControllers.productEdit)
+router.get("/productos/editar/:id", adminProductControllers.productEdit)
 router.get("/productos", adminProductControllers.productList)
 
 
