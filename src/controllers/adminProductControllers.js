@@ -13,8 +13,11 @@ module.exports= {
             })
         },
             productEdit: (req, res) => {
+                let idProducto = + req.params.id
+                let buscandoProducto = getProduct.find(producto => producto.id == idProducto)
                 res.render("admin/products/editProduct", {
-                    title: "Editar Productos"
+                    title: "Editar Productos", 
+                    producto: buscandoProducto
                 })
             }
     

@@ -41,7 +41,7 @@
         "projectId": 4,
         "discount": 15,
         "image": "/img/Harry.jpg",
-        "stock": true       
+        "stock": false     
      },   
     {   
         "id": 5,
