@@ -7,6 +7,7 @@ router.get("/", aControllers.index)
 router.get("/productos/agregar", adminProductControllers.productAdd)
 router.get("/productos/editar/:id", adminProductControllers.productEdit)
 router.get("/productos", adminProductControllers.productList)
+router.post("/productos", adminProductControllers.productCreate)
 
 
 

@@ -13,6 +13,9 @@ app.listen(process.env.PORT || port, () => console.log(`http://localhost:${port}
 /* views config */
 app.set("view engine","ejs")
 app.set("views", path.join(__dirname, "views")) /* aca le decimos que si se requiere archivos los busque en views */
+/* Para poder usar el metodo POST */
+app.use(express.urlencoded({ extended: false}))
+app.use(express.json())
 
 
 //Rutas
