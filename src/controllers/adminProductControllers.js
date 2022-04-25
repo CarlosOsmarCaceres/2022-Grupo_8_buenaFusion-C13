@@ -1,3 +1,4 @@
+const req = require("express/lib/request")
 const {getProduct,escribirJson} = require("../data")
 
 
@@ -13,14 +14,14 @@ module.exports= {
                 title: "Agregar Productos"
             })
         },
-            productEdit: (req, res) => {
-                let idProducto = + req.params.id
-                let buscandoProducto = getProduct.find(producto => producto.id == idProducto)
-                res.render("admin/products/editProduct", {
-                    title: "Editar Productos", 
-                    producto: buscandoProducto
-                })
-            },
+        productEdit: (req, res) => {
+            let idProducto = + req.params.id
+            let buscandoProducto = getProduct.find(producto => producto.id == idProducto)
+            res.render("admin/products/editProduct", {
+                title: "Editar Productos", 
+                producto: buscandoProducto //
+            })
+        },
             productCreate: (req,res)=> {
                 //Crear Objeto
                 let create = 0;
@@ -48,6 +49,30 @@ module.exports= {
                 //Devolver una vista
                 res.redirect("/administrador/productos")
 
-            }
+            },
+            productoEditar: (req,res)=>{
+                //Obtener id de productyo
+                let editProducto = +req.params.id;//se captura como string y se pasa a numero.
+                //Buscar el producto editar y modificar.
+              
+                getProduct.forEach(element => {
+                    if(element.id === editProducto){
+                        //Modificar losvalores del objeto
+                        element.name=req.body.name,//req.body.name capturo y reemplazo element.name
+                        element.price=req.body.price,
+                        element.description=req.body.descrption,
+                        element.categoryId=req.body.categoryId,
+                        element.discount=req.body.discount,
+                        element.image=req.body.image,
+                        element.stock=req.body.stock?true:false
+                    }
+                });
+                //guardar los cambios
+                escribirJson(getProduct)
+                //Direccionar dar una respuesta
+                res.redirect("/administrador/productos")
+            },
+                 
+
     
 }

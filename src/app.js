@@ -5,6 +5,7 @@ const app = express();
 const path= require('path');
 
 const port = 3000;
+const methodOverride = require("method-override");
 
 //Ruta elementos estaticos
 app.use(express.static('./src/public'));
@@ -16,6 +17,9 @@ app.set("views", path.join(__dirname, "views")) /* aca le decimos que si se requ
 /* Para poder usar el metodo POST */
 app.use(express.urlencoded({ extended: false}))
 app.use(express.json())
+//Para poder usar metodos post y delete
+app.use(methodOverride("_method"))
+
 
 
 //Rutas
