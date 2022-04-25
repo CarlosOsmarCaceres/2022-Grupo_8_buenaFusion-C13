@@ -30,7 +30,7 @@
                       <i class="fa-solid fa-pen-to-square"></i>
                     </a>
 
-                    <form action='admin/productos/eliminar/<%- producto.id %>?_method=delete' method="post">
+                    <form action="/administrador/productos/<%= producto.id %>?_method=DELETE" method="POST">
                       <button class="btn btn-danger" type="submit" >
                         <i class="fa-solid fa-trash-can"></i>
                       </button>

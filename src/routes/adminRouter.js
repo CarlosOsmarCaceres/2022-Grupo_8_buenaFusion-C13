@@ -9,7 +9,7 @@ router.get("/productos/editar/:id", adminProductControllers.productEdit)
 router.get("/productos", adminProductControllers.productList)
 router.post("/productos", adminProductControllers.productCreate)
 router.put("/productos/:id", adminProductControllers.productoEditar)
-//router.delete("/productos/eliminar/:id", adminProductControllers.productDelete)
+router.delete("/productos/:id", adminProductControllers.productDelete)
 
 
 

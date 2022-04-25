@@ -72,6 +72,22 @@ module.exports= {
                 //Direccionar dar una respuesta
                 res.redirect("/administrador/productos")
             },
+            productDelete: (req, res) => {
+                let productId = +req.params.id;// CApturamos el id del prodcuto
+                let productTodelete;
+        
+                getProduct.forEach(product => {
+                    if (product.id === productId) {
+                        productTodelete = product.name
+                        let productTodeleteIndex = getProduct.indexOf(product)
+                        getProduct.splice(productTodeleteIndex, 1);	//splice cambia el contenido de un array
+                    }
+                });
+        
+                escribirJson(getProduct)
+        
+                res.redirect("/administrador/productos")
+            }
                  
 
     
