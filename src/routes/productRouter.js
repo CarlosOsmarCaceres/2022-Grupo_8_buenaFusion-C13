@@ -3,7 +3,7 @@ const express = require("express");/* aca requiero exprees */
 const productoController = require("../controllers/productController") /* aca estamos en routes, quiero entrar en controllers */
 
 
-router.get("/detalle", productoController.detalle) 
+router.get("/detalle/:id", productoController.detalle) 
 router.get("/carrito", productoController.carrito) 
 router.get("/", productoController.todosLosProductos)
 

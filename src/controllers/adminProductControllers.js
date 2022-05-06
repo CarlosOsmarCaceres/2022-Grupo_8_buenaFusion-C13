@@ -1,7 +1,6 @@
 const req = require("express/lib/request")
 const {getProduct,escribirJson} = require("../data")
 
-
 module.exports= {
     productList: (req, res) => {
         res.render("admin/products/listProduct", {

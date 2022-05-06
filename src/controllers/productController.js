@@ -10,8 +10,12 @@ module.exports= {
     
     
         detalle:  (req, res) => {
-        res.render("products/productDetail", {
-             title: "detalle"
+            let productId = +req.params.id;// Para obtener el id del producto
+            let product = getProduct.find(product => product.id === productId);
+            
+            res.render("products/productDetail", {
+                title: "detalle",
+                product
             })
     },
 

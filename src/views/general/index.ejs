@@ -7,155 +7,54 @@
     <!-- Fin Header -->
     <br>
     <!-- Inicio Home -->
-    
+
     <hr>
     <!-- inicio del home -->
-    <main class="main_index">
-      <hr>
-     <div class="contenedor">
-       <h2 class="h2_index"> Novedades</h2>
-       <hr>
-         <!-- Carrusel -->      
-       <div class="slider_index">
-           <ul class="ul_index">
-             <li><img src="/img/images (1).jpg" alt=""></li>
-             <li><img src="/img/images-carru.jpg" alt=""></li>
-             <li><img src="/img/images-principito.jpg" alt=""></li>
-             <li><img src="/img/images.jpg" alt=""></li>
-           </ul>
-       </div>
-           <h2>Productos Destacados!</h2>
-           <br>
-      <section class="productos-fran">
-        <article class="product_index">
-          <img width="100%" src="/img/Corazon-Delator.jpg" alt="Corazon-Delator">
-          <div class="detalle_index">
-            <strong> <p class="precio">$2.700</p></strong> 
-            <strong><p class="descuento">40% OFF</p></strong> 
-            <strong>Libro Corazon Delator</strong>
-          <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/el-principito-jpg.jpg" alt=" El Principito">
-          <div class="detalle_index">
-            <strong><p class="precio">$3.000</p></strong> 
-            <strong><p class="descuento">20% OFF</p></strong> 
-            <strong>Libro el Principito</strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/marcadorPizzini.jpg" alt="Marcador Pizzini">
-          <div class="detalle_index">
-            <strong> <p class="precio">$200</p></strong> 
-            <strong>Marcador Pizzini</strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/Harry.jpg" alt="Harry">
-          <div class="detalle_index"> 
-            <strong><p class="precio">$1500</p></strong>
-            <strong><p class="descuento">15% OFF</p></strong>
-            <strong>Libro Harry Potter</strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/marcadorSharpie.jpg" alt="Sharpie">
-          <div class="detalle_index">
-            <strong><p class="precio">$700</p></strong> 
-            <strong>Marcador Sharpie </strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/marcadorStabilo.jpg" alt="Marker Stabilo">
-          <div class="detalle_index"> 
-            <strong><p class="precio">$1.000</p></strong>
-            <strong>Marcador Stabilo </strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/marcAlba.jpg" alt=" Marcador Alba">
-          <div class="detalle_index"> 
-            <strong><p class="precio">$400</p></strong> 
-            <strong>Marcador Alba </strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index"> 
-            <img width="100%" src="/img/mochilaSpiderman.jpg" alt="Mochila Spiderman">
-            <div class="detalle_index">  
-              <strong> <p class="precio">$8.000</p></strong>
-              <strong><p class="descuento">40% OFF</p></strong>
-              <strong>Mochila Spiderman</strong>
-              <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
+    <hr>
+    <h2 class="h2_index"> Novedades</h2>
+    <hr>
+    <!-- Carrusel -->      
+    <div class="slider_index">
+      <ul class="ul_index">
+        <li><img src="/img/slider/slider_1.jpg" alt=""></li>
+        <li><img src="/img/slider/slider_2.jpg" alt=""></li>
+        <li><img src="/img/slider/slider_3.jpg" alt=""></li>
+        <li><img src="/img/slider/slider_4.jpg" alt=""></li>
+      </ul>
+    </div>
+    
+    <h2>Productos Destacados!</h2>
+    <div class="contenedor">
+        <main class="main_index" style="display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: unset;">
+      <br>
+      <% productos.forEach(element => { %>
+        <section class="productos-fran">
+            <div class="home_omar">
+              <a class="Container_omar" href="../producto/detalle/<%= element.id  %>">
+                <article class="product_index">
+                  <img width="100%" src="<%= element.image  %>" alt="<%= element.image  %>">
+                  <div class="detalle_index">
+                    <strong> <p class="precio">$<%= element.price %></p></strong> 
+                    <strong><p class="descuento"><%= element.discount %>% OFF</p></strong> 
+                    <strong><%= element.name  %></strong>
+                  <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
+                  </div>
+                </article>
+              </a>
             </div>
-          </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/Paw patrol}.jpg" alt="Paw Patrol">
-          <div class="detalle_index"> 
-            <strong><p class="precio">$3.000</p></strong>
-            <strong> <p class="descuento">30% OFF</p></strong>
-            <strong> Libro Paw Patroll</strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>    
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/pincelImg1.jpg" alt="Pincel">
-          <div class="detalle_index"> 
-            <strong><p class="precio">$900</p></strong> 
-            <strong> Pincell Comi13</strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/papelAcuarela.jpg" alt="Papel Acuarela">
-          <div class="detalle_index">
-            <strong> <p class="precio">$500</p></strong>
-            <strong> Papel Acuarela</strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/naruto.jpg" alt="NarutoKun">
-          <div class="detalle_index">    
-            <strong><p class="precio">$2.000</p></strong>
-            <strong><p class="descuento">40% OFF</p></strong>
-            <strong>Libro de Naruto</strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-        <br>
-        <article class="product_index">
-          <img width="100%" src="/img/Sasuke.jpg" alt="Manga Naruto">
-          <div class="detalle_index"> 
-            <strong><p class="precio">$2.500</p></strong>
-            <strong><p class="descuento">40% OFF</p></strong> 
-            <strong>Manga Naruto</strong>
-            <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-          </div>
-        </article>
-      </section>
- </main> 
-        
-    <!-- Fin del Home -->
-    <br>
-    <!-- Inicio del Footer -->
+
+            <br>
+          </section>
+          <% }) %>
+      </main> 
+
+      <!-- Fin del Home -->
+      <br>
+      <!-- Inicio del Footer -->
+    </div>
     <%-include("../partials/footer.ejs")%>
     <!-- Fin del Footer -->
     <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>

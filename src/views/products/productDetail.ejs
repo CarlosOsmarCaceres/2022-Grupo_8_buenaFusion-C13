@@ -12,22 +12,22 @@
       <section class="section_detalle">
         <!-- Titulo del producto -->
         <div>
-            <h1 class="titulo_detalle">Adhesivo Sintetico Voligoma 30g.</h1>      
+            <h1 class="titulo_detalle"><%= product.name %></h1>      
         </div>
         <div class="ImgCar_detalle">
         <!-- Cuadro de producto Img-->
             <article class="cuadroProducto">
   
                 <div class="container-cuadroImg" width>
-                    <img class="cuadroImgBig" src="/img/10VOLIGOMADE30.png" alt="Voligoma">
+                    <img class="cuadroImgBig" src="<%= product.image %>" alt="<%= product.image %>">
                 </div>
   
                 <div class="cuadroProductoSmall">
                     <div class="cuadroImgSmall">
-                        <img class="cuadroImg" src="/img/10VOLIGOMADE30.png" alt="Voligoma">
+                        <img class="cuadroImg" src="<%= product.image %>" alt="<%= product.image %>">
                     </div>
                     <div class="cuadroImgSmall">
-                        <img class="cuadroImg" src="/img/10VOLIGOMADE30.png" alt="Voligoma">
+                        <img class="cuadroImg" src="<%= product.image %>" alt="<%= product.image %>">
                     </div>    
                 </div>
   
@@ -44,7 +44,7 @@
                     <li>
                         <div class="containerCar-Flex">
                             <p>Precio x Unidad</p>
-                            <h5>$77.56</h5>
+                            <h5>$<%= product.price %></h5>
                         </div>
                     </li>
                     <li>
@@ -63,7 +63,7 @@
                     <li>
                         <div class="containerCar-Flex">
                            <p>TOTAL</p>
-                           <h5>$930.72
+                           <h5>$<%= product.price %>
                            </h5>
                         </div>
                     </li>

@@ -10,4 +10,5 @@
 @import url('header.css');
 @import url('variables.css');
 @import url('index.css');
-/* @import url('general.css'); */
+@import url('general.css');
+@import url('bootstrap-grid.min.css');

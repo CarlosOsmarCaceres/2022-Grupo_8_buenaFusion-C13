@@ -1,1 +1,167 @@
-[{"id":1,"name":"Corazon-Delator","price":2700,"description":"Libro autentico, edicion limitada","categoryId":1,"projectId":1,"discount":40,"image":"/img/Corazon-Delator.jpg","stock":true},{"id":2,"name":"El Principito editado devuelta","price":"4000","projectId":2,"discount":"20","stock":false},{"id":3,"name":"Marcador Pizzini","price":200,"description":"Marcador reforzado, se adapta a todo tipo de superficie","categoryId":2,"projectId":3,"discount":0,"image":"/img/marcadorPizzini.jpg","stock":true},{"id":4,"name":"Harry Potter","price":"1500","projectId":4,"discount":"15","stock":false},{"id":5,"name":"Marcador Sharpie","price":700,"description":"Marcador Sharpie- Crea tus diseños,edicion limitada, con lapiz de regalo ","categoryId":2,"projectId":5,"discount":0,"image":"/img/marcadorSharpie.jpg","stock":true},{"id":6,"name":"Marker Stabilo","price":1000,"description":"Marcador- Resaltador, multifunciones","categoryId":2,"projectId":6,"discount":0,"image":"/img/marcadorStabilo.jpg","stock":true},{"id":7,"name":"Marcador Alba","price":400,"description":"Marcador para superficies de madera","categoryId":2,"projectId":7,"discount":0,"image":"/img/marcAlba.jpg","stock":true},{"id":8,"name":"Mochila Spiderman","price":8000,"description":"Mochila Spiderman con carrito, lonchera incluida ","categoryId":3,"projectId":8,"discount":40,"image":"/img/mochilaSpiderman.jpg","stock":true},{"id":9,"name":"Paw Patrol","price":3000,"description":"Libro para colorear","categoryId":1,"projectId":9,"discount":30,"image":"/img/Paw patrol}.jpg","stock":true},{"id":10,"name":"Pincel","price":900,"description":"Pincel reforzado, para multiples superficies","categoryId":4,"projectId":10,"discount":0,"image":"/img/pincelImg1.jpg","stock":true},{"id":11,"name":"Papel Acuarela","price":500,"description":"Acuarela infantil- pincel de regalo","categoryId":5,"projectId":11,"discount":0,"image":"/img/papelAcuarela.jpg","stock":true},{"id":12,"name":"NarutoKun","price":2000,"description":"Manga Naruto Shipuden v1","categoryId":1,"projectId":12,"discount":40,"image":"/img/naruto.jpg","stock":true},{"id":13,"name":"Manga Naruto","price":2500,"description":"Manga Naruto V3","categoryId":1,"projectId":13,"discount":40,"image":"/img/Sasuke.jpg","stock":true},{"id":14,"name":"regla verde 20 cm","price":"10","discount":"0","stock":false},{"id":15,"name":"regla verde 30 cm","price":"100","discount":"0","stock":false}]
+[
+    {
+        "id": 1,
+        "name": "Corazon-Delator",
+        "price": 2700,
+        "description": "Libro autentico, edicion limitada",
+        "categoryId": 1,
+        "projectId": 1,
+        "discount": 40,
+        "image": "/img/Corazon-Delator.jpg",
+        "stock": true
+    },
+    {
+        "id": 2,
+        "name": "El Principito editado devuelta",
+        "price": "4000",
+        "description": "Libro El Principito, edicion limitada",
+        "categoryId": 1,
+        "projectId": 2,
+        "discount": "20",
+        "stock": false,
+        "image": "/img/el-principito-jpg.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Marcador Pizzini",
+        "price": 200,
+        "description": "Marcador reforzado, se adapta a todo tipo de superficie",
+        "categoryId": 2,
+        "projectId": 3,
+        "discount": 0,
+        "image": "/img/corazon_oscuro.jpg",
+        "stock": true
+    },
+    {
+        "id": 4,
+        "name": "Harry Potter",
+        "price": "1500",
+        "description": "Libro HArry Potter, edicion limitada",
+        "categoryId": 2,
+        "projectId": 4,
+        "discount": "15",
+        "image": "/img/Harry.jpg",
+        "stock": false
+    },
+    {
+        "id": 5,
+        "name": "La Bella Durmiente",
+        "price": 700,
+        "description": "Marcador Sharpie- Crea tus diseños,edicion limitada, con lapiz de regalo ",
+        "categoryId": 2,
+        "projectId": 5,
+        "discount": 0,
+        "image": "/img/labelladurmiente.jpg",
+        "stock": true
+    },
+    {
+        "id": 6,
+        "name": "Marker Stabilo",
+        "price": 1000,
+        "description": "Marcador- Resaltador, multifunciones",
+        "categoryId": 2,
+        "projectId": 6,
+        "discount": 0,
+        "image": "/img/marcadorStabilo.jpg",
+        "stock": true
+    },
+    {
+        "id": 7,
+        "name": "Marcador Alba",
+        "price": 400,
+        "description": "Marcador para superficies de madera",
+        "categoryId": 2,
+        "projectId": 7,
+        "discount": 0,
+        "image": "/img/marcAlba.jpg",
+        "stock": true
+    },
+    {
+        "id": 8,
+        "name": "Mochila Spiderman",
+        "price": 8000,
+        "description": "Mochila Spiderman con carrito, lonchera incluida ",
+        "categoryId": 3,
+        "projectId": 8,
+        "discount": 40,
+        "image": "/img/mochilaSpiderman.jpg",
+        "stock": true
+    },
+    {
+        "id": 9,
+        "name": "Paw Patrol",
+        "price": 3000,
+        "description": "Libro para colorear",
+        "categoryId": 1,
+        "projectId": 9,
+        "discount": 30,
+        "image": "/img/Paw patrol}.jpg",
+        "stock": true
+    },
+    {
+        "id": 10,
+        "name": "Pincel",
+        "price": 900,
+        "description": "Pincel reforzado, para multiples superficies",
+        "categoryId": 4,
+        "projectId": 10,
+        "discount": 0,
+        "image": "/img/pincelImg1.jpg",
+        "stock": true
+    },
+    {
+        "id": 11,
+        "name": "Papel Acuarela",
+        "price": 500,
+        "description": "Acuarela infantil- pincel de regalo",
+        "categoryId": 5,
+        "projectId": 11,
+        "discount": 0,
+        "image": "/img/papelAcuarela.jpg",
+        "stock": true
+    },
+    {
+        "id": 12,
+        "name": "NarutoKun",
+        "price": 2000,
+        "description": "Manga Naruto Shipuden v1",
+        "categoryId": 1,
+        "projectId": 12,
+        "discount": 40,
+        "image": "/img/naruto.jpg",
+        "stock": true
+    },
+    {
+        "id": 13,
+        "name": "Manga Naruto",
+        "price": 2500,
+        "description": "Manga Naruto V3",
+        "categoryId": 1,
+        "projectId": 13,
+        "discount": 40,
+        "image": "/img/Sasuke.jpg",
+        "stock": true
+    },
+    {
+        "id": 14,
+        "name": "voligoma de 30 gr.",
+        "price": "10",
+        "description": "Adhesivo sintetico de 30 gr",
+        "categoryId": 1,
+        "projectId": 13,
+        "discount": "0",
+        "image": "/img/10VOLIGOMADE30.png",
+        "stock": false
+    },
+    {
+        "id": 15,
+        "name": "Broche MIT 50/1000",
+        "price": "100",
+        "description": "Broche para aborchadora MIT 50",
+        "categoryId": 1,
+        "projectId": 13,        
+        "discount": "0",
+        "image": "/img/66 BROCHE MIT 50 1000.jpg",
+        "stock": false
+    }
+]
