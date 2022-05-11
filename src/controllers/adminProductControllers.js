@@ -29,15 +29,23 @@ module.exports= {
                         create = producto.id;
                     }
                 });
+                // let productoNuevo = {
+                //     id: create + 1,
+                //     nombre: req.body.name,
+                //     precio: req.body.price,
+                //     descripcion: req.body.description,
+                //     categoriaId: req.body.categoryId,
+                //     descuento: req.body.discount,
+                //     // imagen: req.body.image,
+                //     imagen: req.file ? req.file.filename : "default-image.jpg",
+                //     stock: req.body.stock ? true : false
+                // }
                 let productoNuevo = {
+                    ...req.body, 
                     id: create + 1,
-                    name: req.body.name,
-                    price: req.body.price,
-                    description: req.body.description,
-                    categoryId: req.body.categoryId,
-                    discount: req.body.discount,
-                    image: req.body.image,
-                    stock: req.body.stock
+                    // imagen: "desayuno.jpg",
+                    image: req.file ? req.file.filename : "default-image.png",
+                    stock: req.body.stock ? true : false
                 }
                 //Agregar al array el objeto nuevo
                 getProduct.push(productoNuevo)

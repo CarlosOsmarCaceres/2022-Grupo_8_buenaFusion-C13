@@ -4,7 +4,7 @@
 <body>
 <%-include("../partials/header") %>  
 <main class="container"> 
-    <form action="/administrador/productos" method="POST">
+    <form action="/administrador/productos" method="POST" enctype="multipart/form-data">
     <fieldset class="rounded border w-90 mx-auto p-4" id="fondo-mainAdmin">
         <legend class="text-center">AGREGAR PRODUCTO</legend> 
 
@@ -38,7 +38,7 @@
       </div>
       <div class="mb-3">
         <label for="formFile" class="form-label">Agregar archivo de imagen</label>
-        <input name="image" class="form-control" type="file" id="formFile">
+        <input name="imageProduct" class="form-control" type="file" id="formFile">
       </div>
       <br>
       <div class="mb-3 " id="Container-admin">

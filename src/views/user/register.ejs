@@ -7,9 +7,10 @@
     <!-- Fin Header -->
     <br>
     <!-- Inicio Registro -->
+
     <div class="divForm_login">
       <a class="retornHome_login" href="/login">Regresar al home</a>
-      <form class="form_login" action="data.html" method="GET">
+      <form class="form_login" action="registro" method="post" enctype="multipart/form-data"><!-- action="registro" method="post" enctype="multipart/form-data"   en action va la ruta -->
         <div class="subtituloRegistro">
             <h2>Registrarse</h2>
             <i class="fa-solid fa-key"></i>
@@ -27,6 +28,13 @@
             <input class="input_register" type="email" name="email" id="email" placeholder="Correo electronico" required>
             <input class="input_register" type="password" name="pass" id="pass" placeholder="Escriba una contraseña" required>  
         </div>
+        <!-- avata -->
+        <div class="form--group">
+          <label for="avatar">Avatar</label>
+          <br>
+          <input type="file" name="avatar" id="avatar">
+        </div>
+        <!--  -->
         <div class="subtitulo_registro">
             <i class="fa-solid fa-lock"></i>
             <h2>Registrarse</h2>

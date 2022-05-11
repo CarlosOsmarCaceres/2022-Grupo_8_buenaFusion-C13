@@ -8,8 +8,7 @@ const port = 3000;
 const methodOverride = require("method-override");
 
 //Ruta elementos estaticos
-app.use(express.static('./src/public'));
-app.listen(process.env.PORT || port, () => console.log(`http://localhost:${port}`))
+app.use(express.static('./public'));
 
 /* views config */
 app.set("view engine","ejs")
@@ -21,23 +20,22 @@ app.use(express.json())
 app.use(methodOverride("_method"))
 
 
-
-//Rutas
+/* Enrutadores */
 const iRouter = require ("./routes/indexRouter"); /*  estamos requiriendo el archivo router */
 const pRouter = require ("./routes/productRouter"); 
 const uRouter = require ("./routes/userRouter"); 
 const aRouter = require ("./routes/adminRouter"); 
 
 
-
-
-
+/* Middlewares de Rutas */
 app.use("/", iRouter)
 app.use("/producto", pRouter)
 app.use("/usuario", uRouter)
 app.use("/administrador", aRouter)
 
 
+app.listen(process.env.PORT || port, () => console.log(`
+http://localhost:${port}`))
 
 
 
