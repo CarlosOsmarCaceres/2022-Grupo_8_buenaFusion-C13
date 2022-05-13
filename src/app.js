@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(methodOverride("_method"))
 
 
-/* Enrutadores */
+/* Enrutadores +++++*/
 const iRouter = require ("./routes/indexRouter"); /*  estamos requiriendo el archivo router */
 const pRouter = require ("./routes/productRouter"); 
 const uRouter = require ("./routes/userRouter"); 
