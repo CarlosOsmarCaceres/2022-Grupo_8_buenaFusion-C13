@@ -13,6 +13,19 @@ module.exports= {
             title: "login"
         })
     },
+    procesoLogin: (req,res) =>{
+        let user = getUsers.find (user => user.email === req.body.email)
+        req.session.usuario = {
+            id : user.id,
+            nombre: user.nombre,
+            apellido: user.apellido,
+            email: user.email,
+            avatar: user.avatar,
+        }
+        res.locals.usuario = req.session.usuario /* aca guardamos en la variable global al usuario que inicio sesión */
+        res.redirect("/")
+    }
+    ,
     procesoRegistro: (req,res)=> {
          //Registrar un usuario - Guardarlo en el JSON
        // Paso 1 - Crear un objeto User
@@ -46,5 +59,6 @@ module.exports= {
       // Paso 4 - Devolver respuesta (redirección)
       res.redirect('/usuario')
     }
+
     
 }

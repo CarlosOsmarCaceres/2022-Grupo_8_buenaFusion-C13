@@ -1,11 +1,10 @@
 const express = require("express");
-const res = require("express/lib/response");
+/* const res = require("express/lib/response"); */
 const app = express();
-
-const path= require('path');
-
+const path= require('path')
 const port = 3000;
 const methodOverride = require("method-override");
+const session = require("express-session");
 
 //Ruta elementos estaticos
 app.use(express.static('./public'));
@@ -18,6 +17,14 @@ app.use(express.urlencoded({ extended: false}))
 app.use(express.json())
 //Para poder usar metodos post y delete
 app.use(methodOverride("_method"))
+/*  para poder habilitar session */
+app.use(session({
+  secret: 'Libros Coloridos', /* mensaje de lo que vamos hacer, pueder ser cualquier nombre.  */
+  resave: false,
+  saveUninitialized: true,
+  cookie:{} 
+}))
+
 
 
 /* Enrutadores */

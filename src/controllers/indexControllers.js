@@ -6,9 +6,11 @@ module.exports= {
     index: (req, res) => {
             res.render("general/index", {
             title: "inicio",
-            productos: getProduct
+            productos: getProduct,
+            session: req.session
         })
         
     }
+
     
 }

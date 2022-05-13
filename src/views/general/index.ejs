@@ -7,9 +7,11 @@
     <!-- Fin Header -->
     <br>
     <!-- Inicio Home -->
-
-    <hr>
+      <% if ( typeof session.usuario != "undefined") { %>
+          <h1 style="text-align: center;">Bienvenid@ <%= session.usuario.nombre %> </h1>
+      <% } %> 
     <!-- inicio del home -->
+    <br>
     <hr>
     <h2 class="h2_index"> Novedades</h2>
     <hr>

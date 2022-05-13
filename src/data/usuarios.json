@@ -58,5 +58,15 @@
         "email": "franco.emanuel.choque@gmail.com",
         "pass": "123",
         "avatar": "1652229319014_img_.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Cosme",
+        "apellido": "Fulanito",
+        "fecha": "2022-05-19",
+        "telefono": "45567892",
+        "email": "no_me_acuerdo@gmail.com",
+        "pass": "123456",
+        "avatar": "1652403770828_img_.jpg"
     }
 ]

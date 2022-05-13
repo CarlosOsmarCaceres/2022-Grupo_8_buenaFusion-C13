@@ -6,9 +6,13 @@ const uploadFile = require('../middlewares/uploadAvatar');
 
 /* GET - Renderiza vista login */
 router.get("/", usuarioController.logeo) 
+router.post("/", usuarioController.procesoLogin )
+
 /* GET - Renderiza vista registro */
 router.get("/registro", usuarioController.registro) 
 /* POST - Crea un nuevo registro */
 router.post("/registro", uploadFile.single("avatar") ,usuarioController.procesoRegistro) /* ("avatar") el nombre avatar viene de la caja examinar imagenes */ 
+
+
 
 module.exports= router;
