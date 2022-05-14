@@ -23,7 +23,17 @@ module.exports= {
             avatar: user.avatar,
             rol: user.rol
         }
+        if(req.body.remember) {
+            const TIME_IN_MILISECONDS = 259200;
+            res.cookie("fusionCookie", req.session.usuario, {
+                    expires: new Date(Date.now() + TIME_IN_MILISECONDS),
+                    httpOnly: true,
+                    secure: true
+           })
+       }
+
         res.locals.usuario = req.session.usuario /* aca guardamos en la variable global al usuario que inicio sesión */
+
         res.redirect("/")
     }
     ,
@@ -63,7 +73,12 @@ module.exports= {
     },
 
     singOff: (req, res) => {
-        req.session.destroy()
+        req.session.destroy();
+
+        if(req.cookies.fusionCookie) {
+            res.cookie("fusionCookie", "", {maxAge: -1})
+         }
+
         res.redirect("/")
         }
     }

@@ -5,25 +5,29 @@ const path= require('path')
 const port = 3000;
 const methodOverride = require("method-override");
 const session = require("express-session");
+const cookieParser = require("cookie-parser");
+const cookieSession = require("./middlewares/cookieSession");
 
 //Ruta elementos estaticos
 app.use(express.static('./public'));
 
 /* views config */
-app.set("view engine","ejs")
-app.set("views", path.join(__dirname, "views")) /* aca le decimos que si se requiere archivos los busque en views */
+app.set("view engine","ejs");
+app.set("views", path.join(__dirname, "views")); /* aca le decimos que si se requiere archivos los busque en views */
 /* Para poder usar el metodo POST */
-app.use(express.urlencoded({ extended: false}))
-app.use(express.json())
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
 //Para poder usar metodos post y delete
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method"));
 /*  para poder habilitar session */
 app.use(session({
   secret: 'Libros Coloridos', /* mensaje de lo que vamos hacer, pueder ser cualquier nombre.  */
   resave: false,
   saveUninitialized: true,
   cookie:{} 
-}))
+}));
+app.use(cookieParser());
+app.use(cookieSession);
 
 
 
