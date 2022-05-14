@@ -17,7 +17,8 @@
         "telefono": "01133500257",
         "email": "omarcaceres@live.com",
         "pass": "123",
-        "avatar": ""
+        "avatar": "",
+        "rol": "USER"
     },
     {
         "id": 2,
@@ -27,7 +28,8 @@
         "telefono": "01133500257",
         "email": "omarcaceres@live.com",
         "pass": "123",
-        "avatar": ""
+        "avatar": "",
+        "rol": "USER"
     },
     {
         "id": 3,
@@ -37,7 +39,8 @@
         "telefono": "01133500257",
         "email": "omarcaceres@live.com",
         "pass": "123",
-        "avatar": ""
+        "avatar": "",
+        "rol": "USER"
     },
     {
         "id": 4,
@@ -47,7 +50,8 @@
         "telefono": "01133500257",
         "email": "omarcaceres@live.com",
         "pass": "123",
-        "avatar": ""
+        "avatar": "",
+        "rol": "USER"
     },
     {
         "id": 5,
@@ -57,7 +61,8 @@
         "telefono": "1540978038",
         "email": "franco.emanuel.choque@gmail.com",
         "pass": "123",
-        "avatar": "1652229319014_img_.png"
+        "avatar": "1652229319014_img_.png",
+        "rol": "USER"
     },
     {
         "id": 6,
@@ -67,6 +72,18 @@
         "telefono": "45567892",
         "email": "no_me_acuerdo@gmail.com",
         "pass": "123456",
-        "avatar": "1652403770828_img_.jpg"
+        "avatar": "1652403770828_img_.jpg",
+        "rol": "USER"
+    },
+    {
+        "id": 7,
+        "nombre": "Fran ",
+        "apellido": "ADMIN",
+        "fecha": "2022-05-03",
+        "telefono": "1550100887",
+        "email": "admin@mail.com",
+        "pass": "123456789",
+        "avatar": "avatar.jpg",
+        "rol": "ADMIN"
     }
 ]

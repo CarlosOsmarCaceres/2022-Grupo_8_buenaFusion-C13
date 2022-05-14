@@ -21,6 +21,7 @@ module.exports= {
             apellido: user.apellido,
             email: user.email,
             avatar: user.avatar,
+            rol: user.rol
         }
         res.locals.usuario = req.session.usuario /* aca guardamos en la variable global al usuario que inicio sesión */
         res.redirect("/")
@@ -50,15 +51,21 @@ module.exports= {
            telefono: req.body.telefono,
            email: req.body.email,
            pass: req.body.pass,
-           avatar: req.file ? req.file.filename : "avatar.jpg" // Viene una rchivo? si viene, guardame req.file.filename, caso contrario subimo img por dafault
-       }
+           avatar: req.file ? req.file.filename : "avatar.jpg", // Viene una rchivo? si viene, guardame req.file.filename, caso contrario subimo img por dafault
+           rol: "USER" 
+        }
       // Paso 2 - Guardar el nuevo usuario en el array de usuarios
        getUsers.push(newUser)//aqui guardo en memoria no en json
       // Paso 3 - Escribir el JSON de usuarios con el array actual
       escribirUser(getUsers)
       // Paso 4 - Devolver respuesta (redirección)
       res.redirect('/usuario')
+    },
+
+    singOff: (req, res) => {
+        req.session.destroy()
+        res.redirect("/")
+        }
     }
 
     
-}
