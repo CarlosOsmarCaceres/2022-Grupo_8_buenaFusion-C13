@@ -85,5 +85,16 @@
         "pass": "123456789",
         "avatar": "avatar.jpg",
         "rol": "ADMIN"
+    },
+    {
+        "id": 8,
+        "nombre": "Olivia",
+        "apellido": "Choque",
+        "fecha": "2016-03-27",
+        "telefono": "3243242342",
+        "email": "oli.nadie@mail.com",
+        "pass": "$2a$10$.1OM6fMz2mSEDQYUU471q.hNzauJnm3YXIuCgq4AZ78MOweIfSMeW",
+        "avatar": "avatar.jpg",
+        "rol": "USER"
     }
 ]

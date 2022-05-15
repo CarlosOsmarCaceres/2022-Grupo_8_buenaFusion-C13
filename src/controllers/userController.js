@@ -1,5 +1,5 @@
 const {getUsers, escribirUser} = require('../data');
-
+const bcrypt = require("bcryptjs");
 module.exports= {
 
     registro: (req, res) => {
@@ -60,7 +60,7 @@ module.exports= {
            fecha: req.body.fecha,
            telefono: req.body.telefono,
            email: req.body.email,
-           pass: req.body.pass,
+           pass: bcrypt.hashSync(req.body.pass, 10),
            avatar: req.file ? req.file.filename : "avatar.jpg", // Viene una rchivo? si viene, guardame req.file.filename, caso contrario subimo img por dafault
            rol: "USER" 
         }
