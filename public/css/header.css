@@ -80,7 +80,7 @@ background:var(--celeste);
 }
    
 #btn_menu {
-	display: none;
+	display: flex;
 }   
 .btn_span {
 	position: absolute;
@@ -150,7 +150,7 @@ background:var(--celeste);
 }
 
 .container_flex ul {
-	display: none;
+	display: flex;
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -159,8 +159,8 @@ background:var(--celeste);
 }
 
 .container_flex ul li {
-	float: none;
-	width: 150px;
+	float: right;
+	width: 100%;
 }
 
 .container_flex ul a {
