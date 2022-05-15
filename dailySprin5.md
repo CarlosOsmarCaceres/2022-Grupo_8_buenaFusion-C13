@@ -5,7 +5,7 @@
 ● ¿Que harás hoy?Finalizar y subir el Sprint 5 al git
 
 
-<!---------------------------------- Dayli Osmar -------------------------------->
+<!---------------------------------- Dayli  Carlos Osmar Caceres-------------------------------->
 
 * ¿Qué hizo ayer? 
 	Mejorar la vista dinamica y hacerlo dinamico.

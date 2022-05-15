@@ -5,12 +5,14 @@ module.exports= {
     productList: (req, res) => {
         res.render("admin/products/listProduct", {
             title: "Lista de Productos", 
-            productos: getProduct
+            productos: getProduct,
+            session: req.session
         })
     },
         productAdd: (req, res) => {
             res.render("admin/products/addProduct", {
-                title: "Agregar Productos"
+                title: "Agregar Productos",
+                session: req.session
             })
         },
         productEdit: (req, res) => {
@@ -18,7 +20,8 @@ module.exports= {
             let buscandoProducto = getProduct.find(producto => producto.id == idProducto)
             res.render("admin/products/editProduct", {
                 title: "Editar Productos", 
-                producto: buscandoProducto //
+                producto: buscandoProducto,
+                session: req.session //
             })
         },
             productCreate: (req,res)=> {

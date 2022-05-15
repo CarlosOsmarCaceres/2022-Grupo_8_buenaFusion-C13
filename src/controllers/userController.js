@@ -4,13 +4,15 @@ module.exports= {
 
     registro: (req, res) => {
         res.render("user/register", {
-            title: "registro"
+            title: "registro",
+            session: req.session
         })
     },
     
    logeo: (req, res) => {
         res.render("user/login", {
-            title: "login"
+            title: "login",
+            session: req.session
         })
     },
     procesoLogin: (req,res) =>{
@@ -79,7 +81,7 @@ module.exports= {
             res.cookie("fusionCookie", "", {maxAge: -1})
          }
 
-        res.redirect("/")
+        res.redirect("/usuario")
         }
     }
 
