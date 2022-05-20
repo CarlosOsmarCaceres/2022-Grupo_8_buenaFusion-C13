@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <%-include("../partials/head.ejs") %> 
-  <body>
-    <!-- Inicio Header -->
-    <%-include("../partials/header.ejs") %>
-    <!-- Fin Header -->
-    <br>
-    <!-- Inicio Detalle de Producto -->
+    <body>
+        <!-- Inicio Header -->
+        <%-include("../partials/header.ejs") %>
+        <!-- Fin Header -->
+        <br>
+        <!-- Inicio Detalle de Producto -->
+        <div class="divSection_detalle">
+            <section class="section_detalle">
+                <!-- Titulo del producto -->
+                <div>
+                    <h1 class="titulo_detalle"><%= product.name %></h1>      
+                </div>
+                <div class="ImgCar_detalle">
+                    <!-- Cuadro de producto Img-->
+                    <article class="cuadroProducto">
 
-    <div class="divSection_detalle">
-      <section class="section_detalle">
-        <!-- Titulo del producto -->
-        <div>
-            <h1 class="titulo_detalle"><%= product.name %></h1>      
-        </div>
-        <div class="ImgCar_detalle">
-        <!-- Cuadro de producto Img-->
-            <article class="cuadroProducto">
-  
-                <div class="container-cuadroImg" width>
-                    <img class="cuadroImgBig" src="<%= product.image %>" alt="<%= product.image %>">
-                </div>
-  
-                <div class="cuadroProductoSmall">
-                    <div class="cuadroImgSmall">
-                        <img class="cuadroImg" src="<%= product.image %>" alt="<%= product.image %>">
+                        <div class="container-cuadroImg" width>
+                            <img class="cuadroImgBig" src="<%= product.image %>" alt="<%= product.image %>">
+                        </div> 
+                        <div class="cuadroProductoSmall">
+                            <div class="cuadroImgSmall">
+                                <img class="cuadroImg" src="<%= product.image %>" alt="<%= product.image %>">
+                            </div>
+                            <div class="cuadroImgSmall">
+                                <img class="cuadroImg" src="<%= product.image %>" alt="<%= product.image %>">
+                            </div>    
+                        </div>
+
+                    </article>  
+
+                    <!-- Detalle de Producto -->
+                    <div class="car_detalle">
+                        <ul class="ul_detalle">
+                            <li>
+                                <div class="containerCar-center">
+                                    <p>Los Precios Incluyen IVA</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="containerCar-Flex">
+                                    <p>Precio x Unidad</p>
+                                    <h5>$<%= product.price %></h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="containerCar-Flex">
+                                    <p>Cantidad</p> 
+                                    <!-- <div class="acumulador"> - agregar + </div>
+                                        <input type="number" id="tentacles" name="tentacles" min="10" max="100"> -->
+                                    <div class="acumulador"> - agregar + </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="container-center">
+                                    <button class="addCar" type="button">Agregar al carrito</button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="containerCar-Flex">
+                                <p>TOTAL</p>
+                                <h5>$<%= product.price %></h5>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="cuadroImgSmall">
-                        <img class="cuadroImg" src="<%= product.image %>" alt="<%= product.image %>">
-                    </div>    
                 </div>
-  
-            </article>  
-  
-        <!-- Detalle de Producto -->
-            <div class="car_detalle">
-                <ul class="ul_detalle">
-                    <li>
-                        <div class="containerCar-center">
-                            <p>Los Precios Incluyen IVA</p>
+                    <!-- Caracteristicas -->
+                    <div class="descripcion_detalle">
+                        <div class="detalle">
+                        <h4>Caracteristicas</h4>
+                        <p><%= product.description %></p>
                         </div>
-                    </li>
-                    <li>
-                        <div class="containerCar-Flex">
-                            <p>Precio x Unidad</p>
-                            <h5>$<%= product.price %></h5>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="containerCar-Flex">
-                            <p>Cantidad</p> 
-                            <!-- <div class="acumulador"> - agregar + </div>
-                                <input type="number" id="tentacles" name="tentacles" min="10" max="100"> -->
-                            <div class="acumulador"> - agregar + </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="container-center">
-                            <button class="addCar" type="button">Agregar al carrito</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="containerCar-Flex">
-                           <p>TOTAL</p>
-                           <h5>$<%= product.price %>
-                           </h5>
-                        </div>
-                    </li>
-                </ul">
-            </div>
-          </div>
-          <!-- Caracteristicas -->
-          <div class="descripcion_detalle">
-            <div class="detalle">
-              <h4>Caracteristicas</h4>
-              <p><%= product.description %></p>
-            </div>
-          </div>
-        <!-- Carrusel -->
-        
-    <!-- Fin Detalle de producto -->
-    <br>
-    <!-- Inicio del Footer -->
-    <%-include("../partials/footer.ejs")%>
-    <!-- Fin del Footer -->
-    <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>
-  </body>
+                    </div>
+            </section>
+            <!-- Carrusel -->
+        </div> 
+        <!-- Fin Detalle de producto -->
+        <br>
+        <!-- Inicio del Footer -->
+        <%-include("../partials/footer.ejs")%>
+        <!-- Fin del Footer -->
+        <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>
+        <!-- Scripts -->
+        <%-include("../partials/scripts.ejs")%>
+    </body>
 </html>

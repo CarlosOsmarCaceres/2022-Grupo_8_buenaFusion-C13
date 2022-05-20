@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <%-include("../partials/head.ejs") %>
+  
   <body>
     <!-- Inicio Header -->
     <%-include("../partials/header.ejs") %>
@@ -14,7 +15,6 @@
       <% } %> 
 
     <!-- inicio del home -->
-    <br>
     <hr>
     <h2 class="h2_index"> Novedades</h2>
     <hr>
@@ -27,13 +27,11 @@
         <li><img src="/img/slider/slider_4.jpg" alt=""></li>
       </ul>
     </div>
-    
-    <h2>Productos Destacados!</h2>
+    <hr>
+    <h2 class="h2_index">Productos Destacados!</h2>
+    <hr>
     <div class="contenedor">
-        <main class="main_index" style="display: inline-flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: unset;">
+      <div class="main_index" style="display: inline-flex;flex-wrap: wrap; justify-content: center;margin: unset; padding: 0rem;">
       <br>
       <% productos.forEach(element => { %>
         <section class="productos-fran">
@@ -54,7 +52,7 @@
             <br>
           </section>
           <% }) %>
-      </main> 
+        </DIV> 
 
       <!-- Fin del Home -->
       <br>
@@ -62,6 +60,8 @@
     </div>
     <%-include("../partials/footer.ejs")%>
     <!-- Fin del Footer -->
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>
+    <%-include("../partials/scripts.ejs")%>
   </body>
 </html>

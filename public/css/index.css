@@ -2,23 +2,18 @@
  /* INICIO DEL HOME */
  .h2_index {
    display: flex;
-   justify-content: center;
-   background: var(--celeste-claro);
-  } */
+   background: darkcyan;
+   padding-left: 20px;
+  } 
   
   
  /* MAIN */
  .main_index{
-   /* display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color:var(--background-main);
-   width: 100%; */
-
    display: inline-flex;
    flex-wrap: wrap;
    justify-content: center;
    margin: unset;
+   padding: 1rem;
   } 
   .home_omar{
     display: flex;
@@ -78,7 +73,7 @@
   img{
     width: 250px;
     height: 350px;
-    box-shadow: 0 0px 5px #006797;
+    /* box-shadow: 0 0px 5px #006797; */
   }
   .product_index {
     background-color: aliceblue;
@@ -126,12 +121,14 @@
       justify-items: baseline;
       
     }
+  }
     .product_index {
       background-color: aliceblue;
       box-shadow: 0px 0px 5px white;
       padding: 15px;
       width: 285px;
       border-radius: 6px;
+      border: solid 2px #006f97;
       margin: 0rem 0rem 0rem 1rem;
   }
 

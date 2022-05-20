@@ -2,14 +2,14 @@
 <html lang="en">
   <%-include("../partials/head.ejs") %> 
   <body>
-    <!-- Inicio Header -->
     <%-include("../partials/header.ejs") %>
+    <!-- Inicio Header -->
     <!-- Fin Header -->
     <br>
     <!-- Inicio Registro -->
 
     <div class="divForm_login">
-      <a class="retornHome_login" href="/login">Regresar al home</a>
+      <a class="retornHome_login" href="/usuario">Regresar al Login</a>
       <form class="form_login" action="registro" method="post" enctype="multipart/form-data"><!-- action="registro" method="post" enctype="multipart/form-data"   en action va la ruta -->
         <div class="subtituloRegistro">
             <h2>Registrarse</h2>
@@ -79,5 +79,6 @@
     <%-include("../partials/footer.ejs")%>
     <!-- Fin del Footer -->
     <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>
+    <%-include("../partials/scripts.ejs")%>
   </body>
 </html>
