@@ -5,59 +5,58 @@
   <body>
     <!-- Inicio Header -->
     <%-include("../partials/header.ejs") %>
-    <!-- Fin Header -->
     <br>
-    <!-- Inicio Home -->
-      <% if ( typeof session.usuario != "undefined") { %>
-          <h1 style="text-align: center;">Bienvenid@ <%= session.usuario.nombre %> </h1>
-          <br>
-        <a  href="/usuario/signOff" style="display: flex; justify-content: center;"><button> cerrar sesion</button></a>  
-      <% } %> 
-
-    <!-- inicio del home -->
-    <hr>
-    <h2 class="h2_index"> Novedades</h2>
-    <hr>
-    <!-- Carrusel -->      
-    <div class="slider_index">
-      <ul class="ul_index">
-        <li><img src="/img/slider/slider_1.jpg" alt=""></li>
-        <li><img src="/img/slider/slider_2.jpg" alt=""></li>
-        <li><img src="/img/slider/slider_3.jpg" alt=""></li>
-        <li><img src="/img/slider/slider_4.jpg" alt=""></li>
-      </ul>
-    </div>
-    <hr>
-    <h2 class="h2_index">Productos Destacados!</h2>
-    <hr>
-    <div class="contenedor">
-      <div class="main_index" style="display: inline-flex;flex-wrap: wrap; justify-content: center;margin: unset; padding: 0rem;">
-      <br>
-      <% productos.forEach(element => { %>
-        <section class="productos-fran">
-            <div class="home_omar">
-              <a class="Container_omar" href="../producto/detalle/<%= element.id  %>">
-                <article class="product_index">
-                  <img width="100%" src="<%= element.image  %>" alt="<%= element.image  %>">
-                  <div class="detalle_index">
-                    <strong> <p class="precio">$<%= element.price %></p></strong> 
-                    <strong><p class="descuento"><%= element.discount %>% OFF</p></strong> 
-                    <strong><%= element.name  %></strong>
-                  <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
-                  </div>
-                </article>
-              </a>
-            </div>
-
+      <!-- Inicio Home -->
+        <% if ( typeof session.usuario != "undefined") { %>
+            <h1 style="text-align: center;">Bienvenid@ <%= session.usuario.nombre %> </h1>
             <br>
-          </section>
-          <% }) %>
-        </DIV> 
-
-      <!-- Fin del Home -->
-      <br>
-      <!-- Inicio del Footer -->
-    </div>
+          <a  href="/usuario/signOff" style="display: flex; justify-content: center;"><button> cerrar sesion</button></a>  
+        <% } %> 
+  
+      <!-- inicio del home -->
+      <hr>
+      <h2 class="h2_index"> Novedades</h2>
+      <hr>
+      <!-- Carrusel -->      
+      <div class="slider_index">
+        <ul class="ul_index">
+          <li><img src="/img/slider/slider_1.jpg" alt=""></li>
+          <li><img src="/img/slider/slider_2.jpg" alt=""></li>
+          <li><img src="/img/slider/slider_3.jpg" alt=""></li>
+          <li><img src="/img/slider/slider_4.jpg" alt=""></li>
+        </ul>
+      </div>
+      <hr>
+      <h2 class="h2_index">Productos Destacados!</h2>
+      <hr>
+      <div class="contenedor">
+        <div class="main_index" style="display: inline-flex;flex-wrap: wrap; justify-content: center;margin: unset; padding: 0rem;">
+        <br>
+        <% productos.forEach(element => { %>
+          <section class="productos-fran">
+              <div class="home_omar">
+                <a class="Container_omar" href="../producto/detalle/<%= element.id  %>">
+                  <article class="product_index">
+                    <img width="100%" src="<%= element.image  %>" alt="<%= element.image  %>">
+                    <div class="detalle_index">
+                      <strong> <p class="precio">$<%= element.price %></p></strong> 
+                      <strong><p class="descuento"><%= element.discount %>% OFF</p></strong> 
+                      <strong><%= element.name  %></strong>
+                    <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
+                    </div>
+                  </article>
+                </a>
+              </div>
+  
+              <br>
+            </section>
+            <% }) %>
+          </DIV> 
+  
+        <!-- Fin del Home -->
+        <br>
+        <!-- Inicio del Footer -->
+      </div>
     <%-include("../partials/footer.ejs")%>
     <!-- Fin del Footer -->
     <!-- Scripts -->

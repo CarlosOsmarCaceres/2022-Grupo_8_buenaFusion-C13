@@ -1,8 +1,18 @@
 <header class="header">
   <nav class="nav">
-    <a href="/" class="logo nav-lik">
-      <img class="logo nav-link" src="/img/logo.jpg" alt="log">
-    </a>
+    <!-- Logo -->
+    <!-- <div class="contenedor_logo_buscrador"> -->
+
+      <a href="/" class="logo nav-lik">
+        <img class="logo nav-link" src="/img/logo.jpg" alt="log">
+      </a>
+      <div class="omar">
+        <form action="/search" method="GET" class="search-form">
+          <input type="text" name="keywords" placeholder="Buscar productos..." class="search-form_input">
+          <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    <!-- </div> -->
     <button class="nav-toggle" aria-label="Abrir menú">
       <i class="fas fa-bars"></i>
     </button>
@@ -23,4 +33,5 @@
       </li>
     </ul>
   </nav>
+  
 </header>
