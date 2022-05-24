@@ -17,20 +17,41 @@
       <i class="fas fa-bars"></i>
     </button>
     <ul class="nav-menu">
+      <% if ( typeof session.usuario != "undefined") { %>
+        <li class="nav-menu-item" style="color:white ;">
+          Bienvenid@ <%= session.usuario.nombre %>
+         </li>     
+        <% if (session.usuario.rol === "ADMIN") { %>
+        <li  class="nav-menu-item">
+          <a href="/administrador" class="nav-menu-link nav-link">ADMIN</a>
+        </li>
+        <% } %>  
+         
+      <% } else  { %>
+        <li class="nav-menu-item">
+          <a href="/usuario" class="nav-menu-link nav-link"
+            >ingresar</a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="/usuario/registro" class="nav-menu-link nav-link">registrate</a>
+        </li>
+    <% } %> 
+    
       <li class="nav-menu-item">
         <a href="/" class="nav-menu-link nav-link">home</a>
       </li>
       <li class="nav-menu-item">
         <a href="#" class="nav-menu-link nav-link">carrito</a>
       </li>
+      
+    <% if (typeof session.usuario != "undefined") { %>
       <li class="nav-menu-item">
-        <a href="/usuario/registro" class="nav-menu-link nav-link">registrate</a>
+        <a  href="/usuario/signOff" class="nav-menu-link nav-link"> cerrar sesion</a>
       </li>
-      <li class="nav-menu-item">
-        <a href="/usuario" class="nav-menu-link nav-link nav-menu-link_active"
-          >ingresar</a
-        >
-      </li>
+    <% } %>
+    
+    
+      
     </ul>
   </nav>
   
