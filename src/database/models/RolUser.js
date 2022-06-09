@@ -17,7 +17,9 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "rolusers",
         timestamps: false,
     }
-
+    
+    const RolUser = sequelize.define(alias, cols, config);
+    
     RolUser.associate = (models)=>{
 
         RolUser.hasMany(models.User,{           
@@ -25,8 +27,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "roluser_id"          
         })
     }
-
-    const RolUser = sequelize.define(alias, cols, config);
 
     return RolUser;
 }

@@ -44,6 +44,8 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "Users",
         timestamps: false,
     }
+    
+    const User = sequelize.define(alias, cols, config);
 
     User.associate = (models)=>{
 
@@ -56,8 +58,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "estado_id"          
         })
     }
-
-    const User = sequelize.define(alias, cols, config);
 
     return User;
 }

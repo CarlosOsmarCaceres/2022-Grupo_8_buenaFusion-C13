@@ -49,14 +49,13 @@ module.exports = (sequelize, dataTypes) => {
         Product.hasMany(models.Order_Product,{
             as: "ordersproducts",
             foreignKey: "product_id" ,        
-        })
-        Product.belongsTo(models.category,{
+        }),
+        Product.belongsTo(models.Category,{
             as: "category",
             foreignKey: "category_id",        
         })
     }
-    
-
+     
     return Product;
 }
 
