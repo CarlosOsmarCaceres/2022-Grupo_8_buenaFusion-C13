@@ -7,6 +7,7 @@ module.exports= {
         res.render("products/productCart", {
             title: "carrito"
         })
+        
     },
     
     
@@ -27,11 +28,12 @@ module.exports= {
             .then((producto)=>{
                 res.send(producto)
         })
+        .catch((error)=> res.send(error))
         // res.render("general/index", {
         //     title: "todosLosProductos", 
         //     getProduct 
         // }) 
-
+            
     }
     
 }

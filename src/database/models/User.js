@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Model";
+    let alias = "User";
     let cols = {
         id: {
             type: dataTypes.INTEGER(11),
@@ -24,7 +24,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         email: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(45),//estaria bueno poner unique
             allowNull: false,
         },
         pass: {
@@ -33,20 +33,31 @@ module.exports = (sequelize, dataTypes) => {
         },
         avatar: {
             type: dataTypes.STRING(45),
-            allowNull: false,
         },
-        rol: {
+        roluser_id: {//FK Asociado
             type: dataTypes.INTEGER(11),
             allowNull: false,
         },
     }
-    
+
     let config = {
-        tableName: "",
-        //timestamps: false,
+        tableName: "Users",
+        timestamps: false,
     }
 
-    const Model = sequelize.define(alias, cols, config);
+    User.associate = (models)=>{
 
-    return Model;
+        User.belongsTo(models.RolUser,{
+            as: "roluser",//Pertenece a un rol, mas comodo para hacer el includ asociacion
+            foreignKey: "roluser_id"          
+        })
+        User.hasMany(models.Order,{
+            as: "orders",//Pertenece a un rol, mas comodo para hacer el includ asociacion
+            foreignKey: "estado_id"          
+        })
+    }
+
+    const User = sequelize.define(alias, cols, config);
+
+    return User;
 }

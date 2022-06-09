@@ -11,18 +11,21 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
-        product_Id: {
-            type: dataTypes.INTEGER(11),
-            allowNull: false,
-        },
     }
-    
+
     let config = {
         tableName: "categories",
         timestamps: false,
     }
 
     const Category = sequelize.define(alias, cols, config);
+
+    Category.associate = (models)=>{
+        Category.hasMany(models.Product,{
+            as: "products",
+            foreignKey: "category_id" ,        
+        })  
+    }
 
     return Category;
 }

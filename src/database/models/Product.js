@@ -19,9 +19,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT,
             allowNull: false,
         },
-        category:{
+        category_id:{//FK
             type: dataTypes.INTEGER(11),
-            allowNull: false,        
+            allowNull: true,        
         },
         discount:{
             type: dataTypes.INTEGER(11),
@@ -36,13 +36,26 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },   
     }
-    
+
     let config = {
         tableName: "products",
         timestamps: false,
     }
 
     const Product = sequelize.define(alias, cols, config);
+
+    Product.associate = (models)=>{
+
+        Product.hasMany(models.Order_Product,{
+            as: "ordersproducts",
+            foreignKey: "product_id" ,        
+        })
+        Product.belongsTo(models.category,{
+            as: "category",
+            foreignKey: "category_id",        
+        })
+    }
+    
 
     return Product;
 }
