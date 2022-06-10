@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         rol: {
-            type: dataTypes.INTEGER(11),
+            type: dataTypes.STRING(45),
             allowNull: false,
         },
     }

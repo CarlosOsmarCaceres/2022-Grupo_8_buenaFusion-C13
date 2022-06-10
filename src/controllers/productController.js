@@ -20,6 +20,7 @@ module.exports= {
             title: "detalle",
             product
         })
+        
     },
 
     
