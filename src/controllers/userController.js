@@ -11,22 +11,19 @@ module.exports= {
         })
     },
     
-   logeo: (req, res) => {
+    logeo: (req, res) => {
         res.render("user/login", {
             title: "login",
             session: req.session
         })
     },
     procesoLogin: (req,res) =>{
-        
-        //let user = getUsers.find (user => user.email === req.body.email)
         db.User.findOne({
             where:{
                 email: req.body.email
             }
         })
         .then((user)=>{
-
             req.session.usuario = {
                 id : user.id,
                 nombre: user.nombre,
@@ -41,23 +38,14 @@ module.exports= {
                         expires: new Date(Date.now() + TIME_IN_MILISECONDS),
                         httpOnly: true,
                         secure: true
-               })
-           }
-           
-           res.locals.usuario = req.session.usuario /* aca guardamos en la variable global al usuario que inicio sesión */
-   
-           res.redirect("/")
-        
+                })
+            }
+            res.locals.usuario = req.session.usuario /* aca guardamos en la variable global al usuario que inicio sesión */
+            res.redirect("/")
         })
-        
-
-    }
-    ,
-    // Crea y registra el usuario
+    },
     procesoRegistro: (req,res)=> {
-        // falta express validator
         db.User.create({
-            //id: lastId + 1,
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             fecha: req.body.fecha,
@@ -67,54 +55,19 @@ module.exports= {
             avatar: req.file ? req.file.filename: "avatar.jpg",
             roluser_id: "1"
         })
-        .then((user)=>{
-            res.send(user)
+        .then(()=>{
+            res.redirect('/usuario')
         })
         .catch(error => res.send(error))
-
-        /* // Registrar un usuario - Guardarlo en el JSON
-        // Paso 1 - Crear un objeto User
-        // res.send(req.body) ver lo que devuelve
-        // res.send(req.file) ver que devuelve - todos los datos para el milddlewares
-
-
-       let lastId = 0;
-       //recorremos el ususario ty verificamos cual es el ultimo id
-       getUsers.forEach(user => {
-           if(user.id > lastId){
-               
-               lastId = user.id
-           }
-       });
-       //creamos objeto para gurdar acumular los id
-       let newUser = {
-           id: lastId + 1,
-           nombre: req.body.nombre,
-           apellido: req.body.apellido,
-           fecha: req.body.fecha,
-           telefono: req.body.telefono,
-           email: req.body.email,
-           pass: bcrypt.hashSync(req.body.pass, 10),
-           avatar: req.file ? req.file.filename : "avatar.jpg", // Viene una rchivo? si viene, guardame req.file.filename, caso contrario subimo img por dafault
-           rol: "USER" 
-        } */
-      // Paso 2 - Guardar el nuevo usuario en el array de usuarios
-    //   getUsers.push(newUser)//aqui guardo en memoria no en json
-      // Paso 3 - Escribir el JSON de usuarios con el array actual
-     // escribirUser(getUsers)
-      // Paso 4 - Devolver respuesta (redirección)
-      res.redirect('/usuario')
     },
-
     singOff: (req, res) => {
         req.session.destroy();
 
         if(req.cookies.fusionCookie) {
             res.cookie("fusionCookie", "", {maxAge: -1})
-         }
-
-        res.redirect("/usuario")
         }
+        res.redirect("/usuario")
     }
+}
 
     

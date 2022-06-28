@@ -30,11 +30,11 @@ module.exports = (sequelize, dataTypes) => {
 
     Order_Product.associate = (models)=>{
 
-        Order_Product.hasMany(models.Product,{
+        /* Order_Product.hasMany(models.Product,{
             as: "products",
             foreignKey: "product_id" ,        
-        })
-        Order_Product.hasMany(models.Order,{
+        }) */
+        Order_Product.hasMany(models.Order,{//tiene muchos
             as: "orders",
             foreignKey: "order_id" ,        
         }) 

@@ -24,13 +24,12 @@
 </div>
     <div class="container" id="Container-admin">
       <label for="exampleDataList" class="form-label">Categorias</label>
-        <input name="categoryId" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="">
-        <datalist id="datalistOptions">
-        <option value="Libros">
-        <option value="Marcadores">
-        <option value="Mochila">
-        <option value="Pincel">
-      </datalist>
+      <select name="category_id" id="categoria">
+        <option value="" selected hidden>Seleccione una categoria..</option>
+        <% categorias.forEach(({id, nameCategory}) => { %>
+            <option value="<%= id %>"><%= nameCategory %> </option>
+        <% }) %> 
+      </select>
     </div>
     <div class="form-check form-switch pt-3">
         <input name="stock" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -38,7 +37,7 @@
       </div>
       <div class="mb-3">
         <label for="formFile" class="form-label">Agregar archivo de imagen</label>
-        <input name="imageProduct" class="form-control" type="file" id="formFile">
+        <input name="image" class="form-control" type="file" id="formFile">
       </div>
       <br>
       <div class="mb-3 " id="Container-admin">

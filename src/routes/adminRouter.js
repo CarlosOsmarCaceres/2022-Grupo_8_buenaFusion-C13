@@ -8,12 +8,12 @@ const adminCheck = require("../middlewares/adminCheck");
 
 
 // products
-router.get("/", userSessionCheck, adminCheck, aControllers.index) 
-router.get("/productos/agregar", userSessionCheck, adminCheck, adminProductControllers.productAdd)
-router.get("/productos/editar/:id", userSessionCheck, adminCheck, adminProductControllers.productEdit)
-router.get("/productos", userSessionCheck, adminCheck, adminProductControllers.productList)
-router.post("/productos",uploadFile.array("imageProduct"), adminProductControllers.productCreate)
-router.put("/productos/:id", adminProductControllers.productoEditar)
+router.get("/", /* userSessionCheck, adminCheck, */ aControllers.index) 
+router.get("/productos/agregar", /* userSessionCheck, adminCheck, */ adminProductControllers.productAdd)
+router.get("/productos/editar/:id", /* userSessionCheck, adminCheck, */ adminProductControllers.productEdit)
+router.get("/productos", /* userSessionCheck, adminCheck, */ adminProductControllers.productList)
+router.post("/productos",uploadFile.single("image"), adminProductControllers.productCreate)
+router.put("/productos/:id",uploadFile.single("image"), adminProductControllers.productoEditar)
 router.delete("/productos/:id", adminProductControllers.productDelete)
 
 

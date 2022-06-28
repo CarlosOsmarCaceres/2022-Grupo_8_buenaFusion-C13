@@ -46,10 +46,10 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = (models)=>{
 
-        Product.hasMany(models.Order_Product,{
+        /* Product.hasMany(models.Order_Product,{
             as: "ordersproducts",
             foreignKey: "product_id" ,        
-        }),
+        }), */
         Product.belongsTo(models.Category,{
             as: "category",
             foreignKey: "category_id",        

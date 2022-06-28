@@ -1,16 +1,16 @@
-const req = require("express/lib/request")
-const {getProduct,escribirJson} = require("../data")
+const { Product } = require('../database/models')
 
 module.exports= {
 
     index: (req, res) => {
+        Product.findAll()
+        .then(productos => {
             res.render("general/index", {
-            title: "inicio",
-            productos: getProduct,
-            session: req.session
+                title: "inicio",
+                productos,
+                session: req.session
+            })
         })
-        
+        .catch((error)=> res.send(error))
     }
-
-    
 }
