@@ -21,13 +21,32 @@
             <h2>Datos personales</h2>
         </div>
         <div class="box-1_registro">
-            <input class="input_register" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" required>
-            <input class="input_register" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido" required>
-            <input class="input_register" type="date" name="fecha" id="fecha" placeholder="Seleccionar fecha" required>
-            <input class="input_register" type="tel" name="telefono" id="telefono" placeholder="Ingrese su Telefono/Celular" required>
-            <input class="input_register" type="email" name="email" id="email" placeholder="Correo electronico" required>
-            <input class="input_register" type="password" name="pass" id="pass" placeholder="Escriba una contraseña" required>  
-        </div>
+            <input class="input_register" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" value="<%= locals.old && old.nombre ? old.nombre : "" %>">
+            <% if (locals.errors && errors.nombre) { %>           
+              <small class="text-danger"><%= errors.nombre.msg %></small>
+              <% } %>
+
+            <input class="input_register" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido" value="<%= locals.old && old.apellido ? old.apellido : "" %>">
+            <% if (locals.errors && errors.apellido) { %>
+              <small class="text-danger"><%= errors.apellido.msg %></small>
+              <% } %>
+
+            <input class="input_register" type="date" name="fecha" id="fecha" placeholder="Seleccionar fecha" value="<%= locals.old && old.fecha ? old.fecha : "" %>">
+            <% if (locals.errors && errors.fecha) { %>
+              <small class="text-danger"><%= errors.fecha.msg %></small>
+              <% } %>
+              
+            <input class="input_register" type="tel" name="telefono" id="telefono" placeholder="Ingrese su Telefono/Celular" value="<%= locals.old && old.telefono ? old.telefono : "" %>">
+            <% if (locals.errors && errors.telefono) { %>
+              <small class="text-danger"><%= errors.telefono.msg %></small>
+              <% } %>
+              
+            <input class="input_register" type="email" name="email" id="email" placeholder="Correo electronico" value="<%= locals.old && old.email ? old.email : "" %>">
+            <!-- <input class="input_register" type="password" name="pass" id="pass" placeholder="Escriba una contraseña">   -->
+            <% if (locals.errors && errors.email) { %>
+              <small class="text-danger"><%= errors.email.msg %></small>
+              <% } %>
+          </div>
         <!-- avata -->
         <div class="form--group">
           <h2>Avatar</h2>
@@ -41,17 +60,27 @@
             <h2>Registrarse</h2>
         </div>  
         <div class="box-2_registro">
-            <input class="input_register" type="password" name="datopass" id="datopass" placeholder="Ingresar contraseña">  
+            <input class="input_register" type="password" name="pass" id="pass" placeholder="Ingresar contraseña">
+            <% if (locals.errors && errors.pass) { %>
+              <small class="text-danger"><%= errors.pass.msg %></small>
+              <% } %>
+
             <input class="input_register" type="password" name="datorepass" id="datorepass" placeholder="Reingresar su contraseña">
-        </div>  
+            <% if (locals.errors && errors.datorepass) { %>
+              <small class="text-danger"><%= errors.datorepass.msg %></small>
+              <% } %>
+          </div>  
         <div class="condiciones_registro">
             <div class="checkbox">
                 <input class="checkbox-in" type="checkbox" name="pass1" id="promociones" >
                 <label for="promociones">Quiero estar al tanto de nuevas promociones</label>
             </div>
             <div class="checkbox">
-                <input class="checkbox-in" type="checkbox" name="pass1" id="terminos" >
+                <input class="checkbox-in" type="checkbox" name="terms" id="terminos" >
                 <label for="terminos">Aceptar terminos y condiciones</label>
+                <% if (locals.errors && errors.terms) { %>
+                  <small class="text-danger"><%= errors.terms.msg %></small>
+                  <% } %>
             </div>
         </div>
         <div class="boton_registro"> 
