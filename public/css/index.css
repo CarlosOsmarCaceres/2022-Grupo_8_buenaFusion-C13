@@ -13,7 +13,7 @@
    flex-wrap: wrap;
    justify-content: center;
    margin: unset;
-   padding: 1rem;
+   padding-top: 1rem;
   } 
   .home_omar{
     display: flex;
@@ -79,11 +79,16 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
+    padding: 1rem;
     
+  }
+  .description{
+    align-items: center;
   }
   
   article .precio {
     color: black;
+    padding-top: 1 rem;
   }
   article .descuento {
     color: rgb(52, 224, 52);
