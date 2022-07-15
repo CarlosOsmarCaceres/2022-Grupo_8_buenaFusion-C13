@@ -17,9 +17,15 @@
         <!--  -->
         <div class="box-1_login">
           <label for="usuario">Usuario</label>
-          <input class="input_login" type="email" name="email" id="usuario" placeholder="Email o Usuario" required>
+          <input class="input_login" type="email" name="email" id="email" placeholder="Email o Usuario" value="<%= locals.old && old.email ? old.email : "" %>">
+          <% if (locals.errors && errors.email) { %>
+            <small class="text-danger"><%= errors.email.msg %></small>
+            <% } %>
           <label for="pass">Contraseña</label>
-          <input class="input_login" type="password" name="pass" id="pass" placeholder="Ingresar contraseña" required>
+          <input class="input_login" type="password" name="pass" id="pass" placeholder="Ingresar contraseña">
+          <% if (locals.errors && errors.pass) { %>
+            <small class="text-danger"><%= errors.pass.msg %></small>
+            <% } %>
         </div>
         <!--  -->
         <div class="enviar_login">
