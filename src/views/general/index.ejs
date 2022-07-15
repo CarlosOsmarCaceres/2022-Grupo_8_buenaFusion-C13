@@ -26,7 +26,7 @@
       <h2 class="h2_index">Productos Destacados!</h2>
       <hr>
       <div class="contenedor">
-        <div class="main_index" style="display: inline-flex;flex-wrap: wrap; justify-content: center;margin: unset; padding: 0rem;">
+        <div class="main_index" style="display: inline-flex;flex-wrap: wrap; justify-content: center;margin: unset; padding-top: 1rem;">
         <br>
         <% productos.forEach(element => { %>
           <section class="productos-fran">
@@ -35,9 +35,9 @@
                   <article class="product_index">
                     <img width="100%" src="/img/products/<%= element.image  %>" alt="/img/products/<%= element.image  %>">
                     <div class="detalle_index">
-                      <strong> <p class="precio">$<%= element.price %></p></strong> 
+                      <strong><p class="precio">$<%= element.price %></style></p></strong> 
                       <strong><p class="descuento"><%= element.discount %>% OFF</p></strong> 
-                      <strong><%= element.name  %></strong>
+                      <strong class="description"><%= element.name  %></strong>
                     <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
                     </div>
                   </article>
