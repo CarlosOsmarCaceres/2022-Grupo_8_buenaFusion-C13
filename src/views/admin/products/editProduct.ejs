@@ -10,24 +10,36 @@
     <div class="mb-3 col-md-6">
         <label for="name" class="form-label">Nombre</label>
         <input type="text" name="name" class="form-control" id="name" value="<%= producto.name %>">
+        <% if (locals.errors && errors.name) { %>
+          <small class="text-danger"><%= errors.name.msg %></small>
+          <% } %>
 </div>
 <div class="mb-3 col-md-6">
         <label for="price" class="form-label">Precio</label>
         <input type="number" name="price" class="form-control" id="price" value="<%= producto.price %>">
+        <% if (locals.errors && errors.price) { %>
+          <small class="text-danger"><%= errors.price.msg %></small>
+        <% } %>
 </div>
 
 <div class="mb-3 col-md-6">
     <label for="discount" class="form-label">Descuento</label>
     <input type="number" name="discount" class="form-control" id="discount" value="<%= producto.discount %>">
+    <% if (locals.errors && errors.discount) { %>
+      <small class="text-danger"><%= errors.discount.msg %></small>
+    <% } %>
 </div>
     <div class="container" id="Container-admin">
       <label for="exampleDataList" class="form-label">Categorias</label>
-      <select name="category_id" id="categoria">
+      <select name="category_id" id="category_id">
         <option value="" selected hidden>Seleccione una categoria..</option>
         <% categorias.forEach(({id, nameCategory}) => { %>
             <option value="<%= id %>"><%= nameCategory %> </option>
         <% }) %> 
       </select>
+      <% if (locals.errors && errors.category_id) { %>
+        <small class="text-danger"><%= errors.category_id.msg %></small>
+      <% } %>
     </div>
     <div class="form-check form-switch pt-3">
         <input class="form-check-input" type="checkbox" role="switch" <%= producto.stock ?"checked": " " %> id="flexSwitchCheckDefault">
@@ -40,7 +52,10 @@
       <br>
       <div class="mb-3 " id="Container-admin">
         <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
-        <textarea class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"><%= producto.description%></textarea>
+        <textarea class="form-control texto-area-main" name="description" id="description" rows="3"><%= producto.description%></textarea>
+        <% if (locals.errors && errors.description) { %>
+          <small class="text-danger"><%= errors.category_id.msg %></small>
+        <% } %>
       </div>
       <br>
       <div class="col-12" id="boton-adminMain">
