@@ -51,18 +51,20 @@
               <% } %>
           </div>
         <!-- avata -->
-        <div class="box-2 mt-3">
-          <div class="img-container" id="img-preview">
-              
-          </div>
-          <input class="form-control mt-3" type="file" id="formFile">
-          <span  style="color: red;"  id="imgErrors"></span>
-      </div>
-        <!-- <div class="form--group" id="img-preview">
+    
+      <div class="form--group" id="img-preview">
           <h2>Avatar</h2>
         
     
-          <input class="avatarRegister"type="file" name="avatar" id="formFile">
+          <!-- <input class="avatarRegister"type="file" name="avatar" id="formFile"> -->
+          <!-- <div class="box-2 mt-3"> -->
+            <div class="img-container" id="img-preview">
+                
+            </div>
+            <input class="avatarRegister"type="file" name="avatar" id="formFile">
+            <!-- <input class="form-control mt-3" type="file" id="formFile"> -->
+            <span  style="color: red;"  id="imgErrors"></span>
+        <!-- </div> -->
         </div>
         
          <div class="subtitulo_registro">
@@ -71,11 +73,13 @@
         </div>  
         <div class="box-2_registro">
             <input class="input_register" type="password" name="pass" id="pass" placeholder="Ingresar contraseña">
+            <span  style="color: red;"  id="passErrors"></span>
             <% if (locals.errors && errors.pass) { %>
               <small class="text-danger"><%= errors.pass.msg %></small>
               <% } %>
 
             <input class="input_register" type="password" name="datorepass" id="datorepass" placeholder="Reingresar su contraseña">
+            <span  style="color: red;"  id="pass2Errors"></span>
             <% if (locals.errors && errors.datorepass) { %>
               <small class="text-danger"><%= errors.datorepass.msg %></small>
               <% } %>

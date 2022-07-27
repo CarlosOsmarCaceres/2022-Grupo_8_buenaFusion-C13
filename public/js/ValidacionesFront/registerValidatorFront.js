@@ -15,7 +15,7 @@ function qs(element) {
     $emailErrors = qs('#emailErrors'),
     $pass = qs('#pass'),
     $passErrors = qs('#passErrors'),
-    $pass2 = qs('#pass2'),
+    $pass2 = qs('#datorepass'),
     $pass2Errors = qs('#pass2Errors'),
     $fecha = qs('#fecha'),
     $fechaErrors = qs('#fechaErrors'),

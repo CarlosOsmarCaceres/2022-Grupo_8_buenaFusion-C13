@@ -7,11 +7,13 @@ $inputPrice = qs("#price")
 $errorsPrice = qs("#errorsPrice")
 $inputDiscount = qs("#discount")
 $errorsDiscount = qs("#errorsDiscount")
+$category = qs("#category_id")
+$errorsCategory = qs("#errorCategory")
 $inputStock = qs("#flexSwitchCheckDefault")
 $errorsStock = qs("errorsStock")
 $inputFile = qs("#formFile")
 $errorsFile = qs("#errorsFile")
-$inputDescription = qs("#exampleFormControlTextarea1")
+$inputDescription = qs("#description")
 $errorsDescription = qs("#errorsDescription")
 $form = qs("#form")
 $submitErrors = qs("#submitErrors")
@@ -69,18 +71,22 @@ $submitErrors = qs("#submitErrors")
                 $errorsDiscount.innerHTML = ""
         }
     })
-    /* $inputCategory.addEventListener("blur", e =>{
+     /* $category.addEventListener("blur", e =>{
         switch(true){
-            case !$inputCategory.value.trim():
-                $errorCategory.innerHTML = "Seleccione una categoria"
-                break;
-             case !validation.val.test($inputCategory.value):
+            case !$category.value.trim():
+                $errorsCategory.innerHTML = "Seleccione una categoria"
+                $category.classList.remove("is-invalid");
+                break; */
+             /* case !validation.val.test($category.value):
                 $errorCategory.innerHTML = "La categoria no fue seleccionada"   
-                break;                  
-            default:
-                $errorCategory.innerHTML = ""
+                $category.classList.remove("is-invalid");
+                break;     */              
+        /*     default:
+                $category.classList.remove("is-invalid");
+                $category.classList.add("is-valid");
+                $errorsCategory.innerHTML = ""
         }
-    }) */
+    })  */
     $inputStock.addEventListener("click", function (){
         $inputStock.value = "on"
         $inputStock.classList.toggle("is-valid")
@@ -107,7 +113,7 @@ $submitErrors = qs("#submitErrors")
                 break;
             case !validation.valDescription.test($inputDescription.value):
                 $errorsDescription.innerHTML = "La descripcion tiene que tener entre 20 a 99 caracteres."   
-                $inputDescriptiont.classList.remove("is-invalid");
+                $inputDescription.classList.remove("is-invalid");
 
                 break;
             default:
@@ -124,9 +130,7 @@ $submitErrors = qs("#submitErrors")
     
       for (let index = 0; index < elementsForm.length - 1; index ++) { /* con el ciclo for recorremos los elementos del formulario */
           if(elementsForm[index].value == ""
-           && elementsForm[index].type !== "text"
-           && elementsForm[index].type !== "checkbox"
-           && elementsForm[index].type !== "submit"
+              && elementsForm[index].type !== "submit"
            || elementsForm[index].classList.contains("is-invalid")){
               elementsForm[index].classList.add("is-invalid");
               $submitErrors.innerHTML = "Los campos señalados son obligatorios"

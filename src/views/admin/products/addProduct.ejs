@@ -7,17 +7,17 @@
     <form action="/administrador/productos" method="POST"  id="form" enctype="multipart/form-data">
     <fieldset class="rounded border w-90 mx-auto p-4" id="fondo-mainAdmin">
         <legend class="text-center">AGREGAR PRODUCTO</legend> 
-      <div class="mb-3 col-md-6">
+      <!-- <div class="mb-3 col-md-6">
           <label for="name" class="form-label">Nombre</label>
           <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto">
           <span  style="color: red;" class="error"  id="errorsName" ></span>
     
-      </div>
+      </div> 
       <div class="mb-3 col-md-6">
           <label for="price" class="form-label">Precio</label>
           <input type="number" name="price" class="form-control" id="price" placeholder="ej:300">
           <span  style="color: red;"  id="errorsPrice" ></span>
-      </div>
+      </div> -->
 
 
     <div class="mb-3 col-md-6">
@@ -28,14 +28,14 @@
           <small class="text-danger"><%= errors.name.msg %></small>
           <% } %>
 </div>
-<div class="mb-3 col-md-6">
-    <label for="price" class="form-label">Precio</label>
-    <input type="number" name="price" class="form-control" id="price" placeholder="ej:300" value="<%= locals.old && old.price ? old.price : "" %>">
-    <span  style="color: red;"  id="errorsPrice" ></span>
-    <% if (locals.errors && errors.price) { %>
-      <small class="text-danger"><%= errors.price.msg %></small>
-      <% } %>
-</div>
+    <div class="mb-3 col-md-6">
+        <label for="price" class="form-label">Precio</label>
+        <input type="number" name="price" class="form-control" id="price" placeholder="ej:300" value="<%= locals.old && old.price ? old.price : "" %>">
+        <span  style="color: red;"  id="errorsPrice" ></span>
+        <% if (locals.errors && errors.price) { %>
+          <small class="text-danger"><%= errors.price.msg %></small>
+          <% } %>
+    </div>
 
 <div class="mb-3 col-md-6">
     <label for="discount" class="form-label">Descuento</label>
@@ -48,6 +48,7 @@
     <div class="container" id="Container-admin">
       <label for="exampleDataList" class="form-label">Categorias</label>
       <select name="category_id" id="category_id" value="<%= locals.old && old.category_id ? old.category_id : "" %>">
+        <span  style="color: red;"  id="errorsCategory" ></span>
         <option selected hidden value="" >Seleccione una categoria..</option>       
         <% categorias.forEach(({id, nameCategory}) => { %>
             <option value="<%= id %>" <%= (locals.old && old.category_id) && old.category_id === "1" ? "selected" : "" %>><%= nameCategory %></option>
