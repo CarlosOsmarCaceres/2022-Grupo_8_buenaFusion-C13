@@ -4,53 +4,62 @@
 <body>
  <%-include("../partials/header") %>   
 <main class="container"> 
-    <form action="/administrador/productos/<%=producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-    <fieldset class="rounded border w-90 mx-auto p-4" id="fondo-mainAdmin">
-        <legend class="text-center">EDITAR PRODUCTO: <%= producto.name %> </legend> 
-    <div class="mb-3 col-md-6">
-        <label for="name" class="form-label">Nombre</label>
-        <input type="text" name="name" class="form-control" id="name" value="<%= producto.name %>">
-</div>
-<div class="mb-3 col-md-6">
-        <label for="price" class="form-label">Precio</label>
-        <input type="number" name="price" class="form-control" id="price" value="<%= producto.price %>">
-</div>
-
-<div class="mb-3 col-md-6">
-    <label for="discount" class="form-label">Descuento</label>
-    <input type="number" name="discount" class="form-control" id="discount" value="<%= producto.discount %>">
-</div>
-    <div class="container" id="Container-admin">
-      <label for="exampleDataList" class="form-label">Categorias</label>
-      <select name="category_id" id="categoria">
-        <option value="" selected hidden>Seleccione una categoria..</option>
-        <% categorias.forEach(({id, nameCategory}) => { %>
-            <option value="<%= id %>"><%= nameCategory %> </option>
-        <% }) %> 
-      </select>
-    </div>
-    <div class="form-check form-switch pt-3">
-        <input class="form-check-input" type="checkbox" role="switch" <%= producto.stock ?"checked": " " %> id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>
-      </div>
-      <div class="mb-3">
-        <label for="formFile" class="form-label">Agregar archivo de imagen</label>
-        <input class="form-control" type="file" id="formFile" name="image" multiple>
-      </div>
+    <form action="/administrador/productos/<%=producto.id %>?_method=PUT" method="POST" id="form" enctype="multipart/form-data">
+        <fieldset class="rounded border w-90 mx-auto p-4" id="fondo-mainAdmin">
+          <legend class="text-center">EDITAR PRODUCTO: <%= producto.name %> </legend> 
+              <div class="mb-3 col-md-6">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" name="name" class="form-control" id="name" value="<%= producto.name %>">
+                <span  style="color: red;" class="error"  id="errorsName" ></span>
+              </div>
+        <div class="mb-3 col-md-6">
+              <label for="price" class="form-label">Precio</label>
+              <input type="number" name="price" class="form-control" id="price" value="<%= producto.price %>">
+              <span  style="color: red;"  id="errorsPrice" ></span>
+        </div>
+        <div class="mb-3 col-md-6">
+            <label for="discount" class="form-label">Descuento</label>
+            <input type="number" name="discount" class="form-control" id="discount" value="<%= producto.discount %>">
+            <span  style="color: red;"  id="errorsDiscount" ></span>
+          </div>
+        <div class="container" id="Container-admin">
+          <label for="exampleDataList" class="form-label">Categorias</label>
+            <select name="category_id" id="categoria" type="categoria">
+              <option value="" selected hidden>Seleccione una categoria..</option>
+                <% categorias.forEach(({id, nameCategory}) => { %>
+                    <option value="<%= id %>"><%= nameCategory %> </option>
+              <% }) %> 
+           </select>
+        </div>
+        <div class="form-check form-switch pt-3">
+            <input class="form-check-input" type="checkbox" role="switch" <%= producto.stock ?"checked": " " %> id="flexSwitchCheckDefault">
+            <span  style="color: red;"  id="errorsStock" ></span> 
+            <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Agregar archivo de imagen</label>
+            <input class="form-control" type="file" id="formFile" name="image" multiple>
+            <span  style="color: red;"  id="errorsFile" ></span>
+        </div>
       <br>
-      <div class="mb-3 " id="Container-admin">
-        <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
-        <textarea class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"><%= producto.description%></textarea>
-      </div>
+        <div class="mb-3 " id="Container-admin">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+            <textarea class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"><%= producto.description%></textarea>
+            <!-- <input name="description" class="form-control" type="text" id="exampleFormControlTextarea1" rows="3"> -->
+            <span  style="color: red;"  id="errorsDescription" ></span>
+          </div>
       <br>
-      <div class="col-12" id="boton-adminMain">
-        <button class="btn btn-primary" type="submit">Editar</button>
-      </div>
+        <div class="col-12" id="boton-adminMain">
+            <button class="btn btn-primary" type="submit">Editar</button>
+            <span style="color: red;" id="submitErrors"></span>
+        </div>
     </fieldset>
  </form>
 </main>
 <%-include("../partials/footer") %> 
     <!--Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="/js/ValidacionesFront/adminValidatorFront/editProductValidatorFront.js"></script>
 <%-include("../partials/script") %> 
 </body>
 </html>

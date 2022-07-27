@@ -10,7 +10,7 @@
 
     <div class="divForm_login">
       <a class="retornHome_login" href="/usuario">Regresar al Login</a>
-      <form class="form_login" action="registro" method="post" enctype="multipart/form-data"><!-- action="registro" method="post" enctype="multipart/form-data"   en action va la ruta -->
+      <form  class="form_login" id="form" action="registro" method="post" enctype="multipart/form-data"><!-- action="registro" method="post" enctype="multipart/form-data"   en action va la ruta -->
         <div class="subtituloRegistro">
             <h2>Registrarse</h2>
             <i class="fa-solid fa-key"></i>
@@ -21,29 +21,43 @@
             <h2>Datos personales</h2>
         </div>
         <div class="box-1_registro">
-            <input class="input_register" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" required>
-            <input class="input_register" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido" required>
-            <input class="input_register" type="date" name="fecha" id="fecha" placeholder="Seleccionar fecha" required>
-            <input class="input_register" type="tel" name="telefono" id="telefono" placeholder="Ingrese su Telefono/Celular" required>
-            <input class="input_register" type="email" name="email" id="email" placeholder="Correo electronico" required>
-            <input class="input_register" type="password" name="pass" id="pass" placeholder="Escriba una contraseña" required>  
-        </div>
+            <input class="input_register" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre">
+            <span  style="color: red;" class="error"  id="nombreErrors" ></span>
+            <input class="input_register" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido">
+            <span  style="color: red;"  id="apellidoErrors"></span>
+            <input class="input_register" type="date" name="fecha" id="fecha" placeholder="Seleccionar fecha">
+            <input class="input_register" type="tel" name="telefono" id="telefono" placeholder="Ingrese su Telefono/Celular">
+            <input class="input_register" type="email" name="email" id="email" placeholder="Correo electronico">
+            <span style="color: red;" id="emailErrors"></span>
+            <input class="input_register" type="password" name="pass" id="pass" placeholder="Escriba una contraseña">  
+            <span  style="color: red;"  id="passErrors"></span>
+            <input class="input_register" type="password" name="pass2" id="pass2" placeholder="Reingresar su contraseña">
+            <span  style="color: red;" id="pass2Errors"></span>
+          </div>
         <!-- avata -->
-        <div class="form--group">
+        <div class="box-2 mt-3">
+          <div class="img-container" id="img-preview">
+              
+          </div>
+          <input class="form-control mt-3" type="file" id="formFile">
+          <span  style="color: red;"  id="imgErrors"></span>
+      </div>
+        <!-- <div class="form--group" id="img-preview">
           <h2>Avatar</h2>
-          <!-- <label for="avatar">Avatar</label> -->
-          <!-- <br> -->
-          <input class="avatarRegister"type="file" name="avatar" id="avatar">
+        
+    
+          <input class="avatarRegister"type="file" name="avatar" id="formFile">
         </div>
-        <!--  -->
-        <div class="subtitulo_registro">
+        
+         <div class="subtitulo_registro">
             <i class="fa-solid fa-lock"></i>
             <h2>Registrarse</h2>
         </div>  
         <div class="box-2_registro">
             <input class="input_register" type="password" name="datopass" id="datopass" placeholder="Ingresar contraseña">  
             <input class="input_register" type="password" name="datorepass" id="datorepass" placeholder="Reingresar su contraseña">
-        </div>  
+        </div>   -->
+         <br>
         <div class="condiciones_registro">
             <div class="checkbox">
                 <input class="checkbox-in" type="checkbox" name="pass1" id="promociones" >
@@ -56,6 +70,7 @@
         </div>
         <div class="boton_registro"> 
             <button class="boton-boton" type="submit">Enviar</button>
+            <span style="color: red;" id="submitErrors"></span>
             <button class="boton-boton" type="reset">Cancelar</button>
         </div>
         <div class="redes_registro">
@@ -80,6 +95,7 @@
     <%-include("../partials/footer.ejs")%>
     <!-- Fin del Footer -->
     <script src="https://kit.fontawesome.com/5f1547b5eb.js" crossorigin="anonymous"></script>
+    <script src="/js/ValidacionesFront/registerValidatorFront.js"></script>
     <%-include("../partials/scripts.ejs")%>
   </body>
 </html>
