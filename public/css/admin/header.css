@@ -10,7 +10,10 @@
 #boton-adminMain{
     text-align: center;
 }
-
+body{
+    color: rgb(24 24 86);
+    
+}
 @media (min-width:768px){
     #fondo-mainAdmin{ 
         display: flex;

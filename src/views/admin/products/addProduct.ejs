@@ -19,25 +19,49 @@
           <span  style="color: red;"  id="errorsPrice" ></span>
       </div>
 
-      <div class="mb-3 col-md-6">
-          <label for="discount" class="form-label">Descuento</label>
-          <input type="number" name="discount" class="form-control" id="discount" placeholder="Ingresar descuento">
-          <span  style="color: red;"  id="errorsDiscount" ></span>
-        </div>
-      <div class="container" id="Container-admin">
-        <label for="exampleDataList" class="form-label">Categorias</label>
-            <select name="category_id" id="categoria" type="text" >
-              <option value="" selected hidden>Seleccione una categoria..</option>
-                <% categorias.forEach(({id, nameCategory}) => { %>
-                    <option value="<%= id %>"><%= nameCategory %> </option>                     
-                <% }) %> 
-            </select>
-      </div>
-      <div class="form-check form-switch pt-3">
-          <input name="stock" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-          <span  style="color: red;"  id="errorsStock" ></span>
-          <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>
-      </div>
+
+    <div class="mb-3 col-md-6">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto" value="<%= locals.old && old.name ? old.name : "" %>">
+        <span  style="color: red;" class="error"  id="errorsName" ></span>
+        <% if (locals.errors && errors.name) { %>
+          <small class="text-danger"><%= errors.name.msg %></small>
+          <% } %>
+</div>
+<div class="mb-3 col-md-6">
+    <label for="price" class="form-label">Precio</label>
+    <input type="number" name="price" class="form-control" id="price" placeholder="ej:300" value="<%= locals.old && old.price ? old.price : "" %>">
+    <span  style="color: red;"  id="errorsPrice" ></span>
+    <% if (locals.errors && errors.price) { %>
+      <small class="text-danger"><%= errors.price.msg %></small>
+      <% } %>
+</div>
+
+<div class="mb-3 col-md-6">
+    <label for="discount" class="form-label">Descuento</label>
+    <input type="number" name="discount" class="form-control" id="discount" placeholder="Ingresar descuento" value="<%= locals.old && old.discount ? old.discount : "" %>">
+    <span  style="color: red;"  id="errorsDiscount" ></span>
+    <% if (locals.errors && errors.discount) { %>
+      <small class="text-danger"><%= errors.discount.msg %></small>
+      <% } %>
+</div>
+    <div class="container" id="Container-admin">
+      <label for="exampleDataList" class="form-label">Categorias</label>
+      <select name="category_id" id="category_id" value="<%= locals.old && old.category_id ? old.category_id : "" %>">
+        <option selected hidden value="" >Seleccione una categoria..</option>       
+        <% categorias.forEach(({id, nameCategory}) => { %>
+            <option value="<%= id %>" <%= (locals.old && old.category_id) && old.category_id === "1" ? "selected" : "" %>><%= nameCategory %></option>
+        <% }) %>      
+      </select>
+      <% if (locals.errors && errors.category_id) { %>
+        <small class="text-danger"><%= errors.category_id.msg %></small>
+        <% } %> 
+    </div>
+    <div class="form-check form-switch pt-3">
+        <input name="stock" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" <%= (locals.old && old.stock) ? "checked" : "" %>>
+        <span  style="color: red;"  id="errorsStock" ></span>
+        <label class="form-check-label" for="flexSwitchCheckDefault">Stock</label>
+      </div>  
       <div class="mb-3">
         <label for="formFile" class="form-label">Agregar archivo de imagen</label>
         <input name="image" class="form-control" type="file" id="formFile">
@@ -46,13 +70,13 @@
       <br>
       <div class="mb-3 " id="Container-admin">
         <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
-<!--         <input name="description" class="form-control" type="text" id="exampleFormControlTextarea1" rows="3">
- -->      <textarea name="description" class="form-control texto-area-main" type="text" id="exampleFormControlTextarea1" rows="3"></textarea>
-   <span  style="color: red;"  id="errorsDescription" ></span>
-
-        <!-- <textarea name="description" class="form-control texto-area-main" id="exampleFormControlTextarea1" rows="3"> </textarea> -->
-     </div>
-      <br> 
+        <textarea name="description" class="form-control texto-area-main" type="text" id="description" rows="3"><%= locals.old && old.description ? old.description : "" %></textarea>
+        <span  style="color: red;"  id="errorsDescription" ></span>
+        <% if (locals.errors && errors.description) { %>
+          <small class="text-danger"><%= errors.description.msg %></small>
+          <% } %>
+      </div>
+      <br>
       <div class="col-12" id="boton-adminMain">
         <button class="btn btn-primary" type="submit">Crear</button>
         <span style="color: red;" id="submitErrors"></span>

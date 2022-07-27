@@ -17,11 +17,17 @@
         <!--  -->
         <div class="box-1_login">
           <label for="usuario">Usuario</label>
-          <input class="input_login" type="email" name="email" id="email" placeholder="Ingrese Email o Usuario">
+          <input class="input_login" type="email" name="email" id="email" placeholder="Email o Usuario" value="<%= locals.old && old.email ? old.email : "" %>">
           <span style="color: red;" id="emailErrors"></span>
+          <% if (locals.errors && errors.email) { %>
+            <small class="text-danger"><%= errors.email.msg %></small>
+            <% } %>
           <label for="pass">Contraseña</label>
           <input class="input_login" type="password" name="pass" id="pass" placeholder="Ingresar contraseña">
           <span  style="color: red;"  id="passErrors"></span>
+          <% if (locals.errors && errors.pass) { %>
+            <small class="text-danger"><%= errors.pass.msg %></small>
+            <% } %>
         </div>
         <!--  -->
         <div class="enviar_login">
