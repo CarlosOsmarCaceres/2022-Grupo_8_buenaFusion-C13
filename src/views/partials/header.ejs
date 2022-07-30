@@ -21,7 +21,7 @@
         <li class="nav-menu-item" style="color:white ;">
           Bienvenid@ <%= session.usuario.nombre %>
          </li>     
-        <% if (session.usuario.rol === "ADMIN") { %>
+        <% if (session.usuario.roluser_id === 2) { %>
         <li  class="nav-menu-item">
           <a href="/administrador" class="nav-menu-link nav-link">ADMIN</a>
         </li>
@@ -37,9 +37,9 @@
         </li>
     <% } %> 
     
-      <li class="nav-menu-item">
+      <!-- <li class="nav-menu-item">
         <a href="/" class="nav-menu-link nav-link">home</a>
-      </li>
+      </li> -->
       <li class="nav-menu-item">
         <a href="#" class="nav-menu-link nav-link">carrito</a>
       </li>

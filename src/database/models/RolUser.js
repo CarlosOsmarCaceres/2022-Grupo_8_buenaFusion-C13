@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false,
         },
-        rol: {
+        roluser_id: {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
