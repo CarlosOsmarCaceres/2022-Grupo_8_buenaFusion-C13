@@ -57,11 +57,7 @@
     width: 100%;
   }
   
-  img{
-    width: 250px;
-    height: 350px;
-    /* box-shadow: 0 0px 5px #006797; */
-  }
+ 
   .product_index {
     background-color: aliceblue;
     margin-bottom: 6px;

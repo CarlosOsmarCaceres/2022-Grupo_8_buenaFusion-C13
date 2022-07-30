@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include("../partials/head") %>
+<body>
+ <%-include("../partials/header") %>   
+<main class="container"> 
+    <form action="/administrador/usuarios/<%=usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <fieldset class="rounded border w-90 mx-auto p-4" id="fondo-mainAdmin">
+        <legend class="text-center">PERFIL DE USUARIO: <%= usuario.name %> </legend> 
+    <!-- <div class="mb-3 col-md-6">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" id="nombre" value="<%= usuario.nombre %>">
+        <% if (locals.errors && errors.nombre) { %>
+          <small class="text-danger"><%= errors.nombre.msg %></small>
+          <% } %>
+</div> -->
+<!-- <div class="mb-3 col-md-6">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" name="apellido" class="form-control" id="apellido" value="<%= usuario.apellido %>">
+        <% if (locals.errors && errors.apellido) { %>
+          <small class="text-danger"><%= errors.apellido.msg %></small>
+        <% } %>
+</div>
+
+<div class="mb-3 col-md-6">
+    <label for="fecha" class="form-label">Fecha</label>
+    <input type="date" name="fecha" class="form-control" id="fecha" value="<%= usuario.fecha %>">
+    <% if (locals.errors && errors.fecha) { %>
+      <small class="text-danger"><%= errors.fecha.msg %></small>
+    <% } %>
+</div>
+<div class="mb-3 col-md-6">
+  <label for="telefono" class="form-label">Telefono</label>
+  <input type="number" name="telefono" class="form-control" id="telefono" value="<%= usuario.telefono %>">
+  <% if (locals.errors && errors.telefono) { %>
+    <small class="text-danger"><%= errors.telefono.msg %></small>
+  <% } %>
+</div>
+<div class="mb-3 col-md-6">
+  <label for="email" class="form-label">Email</label>
+  <input type="email" name="email" class="form-control" id="email" value="<%= usuario.email %>">
+  <% if (locals.errors && errors.email) { %>
+    <small class="text-danger"><%= errors.email.msg %></small>
+  <% } %>
+</div>
+
+
+<div class="mb-3">
+  <label for="avatar" class="form-label">Agregar archivo de imagen</label>
+  <input class="form-control" type="file" id="avatar" name="avatar" multiple>
+</div>
+<br>
+<div class="container" id="Container-admin"> -->
+  <label for="pass" class="form-label">Categorias</label>
+  <select name="pass" id="pass">
+    <option value="" selected hidden>Seleccione una categoria..</option>
+    <% categorias.forEach(({id, rol}) => { %>
+        <option value="<%= id %>"><%= rol %> </option>
+    <% }) %> 
+  </select>
+  <% if (locals.errors && errors.pass) { %>
+    <small class="text-danger"><%= errors.pass.msg %></small>
+  <% } %>
+</div>
+
+<br>
+      <div class="col-12" id="boton-adminMain">
+        <button class="btn btn-primary" type="submit">Editar</button>
+      </div>
+    </fieldset>
+ </form>
+</main>
+<%-include("../partials/footer") %> 
+    <!--Bootstrap-->
+<%-include("../partials/script") %> 
+</body>
+</html>

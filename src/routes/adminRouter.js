@@ -7,6 +7,8 @@ const userSessionCheck = require("../middlewares/userSessionCheck");
 const adminCheck = require("../middlewares/adminCheck");
 const productCreateValidator = require('../validations/productCreateValidator');
 const productEditValidator = require("../validations/productEditValidator");
+const adminUsersController = require("../controllers/adminUserControllers")
+const uploadAvatar = require("../middlewares/uploadAvatar")
 
 // products
 router.get("/", userSessionCheck, adminCheck, aControllers.index) 
@@ -17,6 +19,14 @@ router.post("/productos",uploadFile.single("image"),productCreateValidator , adm
 router.put("/productos/:id",uploadFile.single("image"),productEditValidator, adminProductControllers.productoEditar)
 router.delete("/productos/:id", adminProductControllers.productDelete)
 
+//CRUD admin USUARIOS adri
+router.get("/", /* userSessionCheck, adminCheck, */ aControllers.index) 
+//router.get("/usuarios/agregar", /* userSessionCheck, adminCheck,  */adminUsersController.userAdd)
+router.get("/usuarios/editar/:id", /* userSessionCheck, adminCheck,  */adminUsersController.userEdit)
+router.get("/usuarios", /* userSessionCheck, adminCheck, */ adminUsersController.userList)
+//router.post("/usuarios",/* uploadFile.single("image"),productCreateValidator  ,*/ adminUsersController.userCreate)
+router.put("/usuarios/:id",uploadAvatar.single("image"),/* productEditValidator, */ adminUsersController.userEditar)
+router.delete("/usuarios/:id", adminUsersController.userDelete)
 
 
  module.exports= router

@@ -15,6 +15,13 @@
     justify-content: center;
 }
 
+.caracteristicas{
+    background-color: aliceblue;
+    padding: 35px;
+    border-radius: 10%;
+}
+
+
 .ImgCar_detalle {
     display: flex;
     flex-direction: column;
@@ -31,7 +38,7 @@
     display: flex;
     justify-content: center ;
     margin-bottom: 6px;
-    width: min-content;
+    /* width: min-content; */
     padding: 3%;
     border-radius: 6px;
 }
