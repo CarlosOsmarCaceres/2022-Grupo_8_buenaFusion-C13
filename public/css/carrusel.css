@@ -2,7 +2,7 @@ body {
     margin: 0;
   }
 .carrusel {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
   }
@@ -13,13 +13,24 @@ body {
     overflow-y: hidden;
     padding: 30px 0px;
   }
-  
+  .img_carrusel_footer{
+    max-height: 100%;
+    border-radius: 40px;
+    box-shadow: 0px 0px 9px;
+
+  }
   .carrusel-item {
-    min-width: 200px;
+    /* min-width: 200px;
     max-width: 200px;
     height: 300px;
     outline: 2px solid black;
+    cursor: pointer; */
+    min-width: 200px;
+    max-width: 200px;
+    height: 300px;
+    outline: 2px solid #00000000;
     cursor: pointer;
+    padding: 10px;
   }
   
   .carrusel-item img {

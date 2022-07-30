@@ -8,7 +8,7 @@
     color: #006f97;
 }
 .form_login{
-    display: flex;  
+    /* display: flex;  
     flex-direction: column;
     background-color: var(--color-1);
     border: solid 2px #006f97;
@@ -18,7 +18,15 @@
     border-radius: 6px;
     justify-content: center ;
     background-color: aliceblue;
-    box-shadow: 0 0px 5px white;
+    box-shadow: 0 0px 5px white; */
+    background-color: rgb(219 219 219 / 72%);
+    box-shadow: 10px 10px 16px 5px grey;
+    padding: 19px;
+    width: 285px;
+    border-radius: 42px;
+    /* border: solid 0px rgb(24 24 86); */
+    margin: 1rem 1rem 1rem 2rem;
+    padding-bottom: 51px;
    
 }
 .portada {

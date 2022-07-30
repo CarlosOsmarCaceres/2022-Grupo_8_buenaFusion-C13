@@ -12,12 +12,19 @@
   }
   
   .header {
-	background: linear-gradient(to top, #1f1c2c, #928dab);
+	/* background: linear-gradient(to top, #1f1c2c, #928dab);
 	height: 80px;
 	position: fixed;
 	width: 100%;
 	top: 0;
-	left: 0;
+	left: 0; */
+	background: rgb(24 24 86);
+    height: 80px;
+    position: fixed;
+    box-shadow: 0px -10px 49px 21px;
+    width: 100%;
+    top: 0;
+    left: 0;
   }
   
   .nav {
