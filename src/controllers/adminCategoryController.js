@@ -22,11 +22,11 @@ module.exports = {
 
     categoryCreate: (req, res) => {
        Category.create({
-            name: req.body.name,
+        nameCategory: req.body.name,
 
         })
          .then((result)=>{
-            res.redirect("/admin/categories")
+            res.redirect("/administrador/categories")
         }) 
         .catch((error) => { res.send(error)})
     },
@@ -49,7 +49,7 @@ module.exports = {
         let category= +req.params.id
 
        Category.update({
-            name: req.body.name
+            nameCategory: req.body.name
         }, {
             where: {
                 id: category
@@ -57,7 +57,7 @@ module.exports = {
         })
         .then((result) => {
             if(result){
-                return res.redirect("/admin/categories")
+                return res.redirect("/administrador/categories")
             }else{
                 return res.send("No se puede actualizar la categoria.")
             }
@@ -75,7 +75,7 @@ module.exports = {
         })
         .then((result) => {
             if(result){
-                res.redirect("/admin/categories")
+                res.redirect("/administrador/categories")
             }else{
                 res.send("Categoria eliminada.")
             }

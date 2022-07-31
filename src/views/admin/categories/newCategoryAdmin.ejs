@@ -8,13 +8,13 @@
         </article>
         <article>
             <button class="btn-add">
-                <a href="/admin/categories/addCategory">
+                <a href="/administrador/categories/addCategory">
                     <i class="fa-solid fa-plus"></i> Nuevo Producto
                 </a>
             </button>
         </article>
         <article class="art-search">
-            <form action="/admin/categories/searchCategory" method="get">
+            <form action="/administrador/categories/searchCategory" method="get">
                 <input type="text" name="search" id="search" placeholder="Buscar Categoría">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
@@ -37,10 +37,10 @@
                             <td class="texto-corto"><%=categoria.name%></td>
                             <td>$<%=categoria.price%></td>
                             <td class="btn-edit">
-                              <a href="/admin/categories/editCategory<%- categoria.id %>" class="btn btn-success">
+                              <a href="/administrador/categories/editCategory<%- categoria.id %>" class="btn btn-success">
                                 <i class="fa-solid fa-pen-to-square"></i>
                               </a>
-                              <form action="/admin/categories/delete/<%- categoria.id %>?_method=DELETE" method="POST">
+                              <form action="/administrador/categories/delete/<%- categoria.id %>?_method=DELETE" method="POST">
                                 <button class="btn btn-danger" type="submit">
                                   <i class="fa-solid fa-trash-can"></i>
                                 </button>

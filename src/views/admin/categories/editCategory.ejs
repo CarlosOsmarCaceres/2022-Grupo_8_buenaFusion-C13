@@ -4,7 +4,7 @@
     <%-include("../partials/header")%>
     
     <main>
-        <form action="/admin/categories/editCategory/<%-category.id%>?_method=PUT" method="POST">
+        <form action="/administrador/categories/editCategory/<%-category.id%>?_method=PUT" method="POST">
             <div>
                 <label for="name">Nombre de la categoría</label>
                 <input type="text" name="name" value="<%=category.name%>" id="name">
@@ -16,7 +16,7 @@
         </form>
 
         <div>
-            <a href="/admin/categories">Volver</a>
+            <a href="/administrador/categories">Volver</a>
         </div>
     </main>
 

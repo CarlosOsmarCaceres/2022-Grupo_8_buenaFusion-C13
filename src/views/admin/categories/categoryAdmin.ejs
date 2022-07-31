@@ -6,13 +6,13 @@
     <main>
         <article >
             <button >
-                <a href="/admin/categories/addCategory">
+                <a href="/administrador/categories/addCategory">
                     Nueva Categoría
                 </a>
             </button>
         </article>
         <article >
-            <form action="/admin/categories/searchCategory" method="get">
+            <form action="/administrador/categories/searchCategory" method="get">
                 <input type="text" name="search" id="search" placeholder="Buscar Categoría">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
@@ -31,12 +31,12 @@
                     <% categorias.forEach(categoria => { %>
                         <tr class="text-center">
                             <th scope="row"><%=categoria.id%></th>
-                            <td><%=categoria.name%></td>
+                            <td><%=categoria.nameCategory%></td>
                             <td>
-                              <a href="/admin/categories/editCategory/<%- categoria.id %>" class="btn" id="btn-admin-modificacion">
+                              <a href="/administrador/categories/editCategory/<%- categoria.id %>" class="btn" id="btn-admin-modificacion">
                                 <i class="fa-solid fa-pen-to-square"></i>
                               </a>
-                              <form action="/admin/categories/delete/<%- categoria.id %>?_method=DELETE" method="POST">
+                              <form action="/administrador/categories/delete/<%- categoria.id %>?_method=DELETE" method="POST">
                                 <button type="submit" class="btn" id="btn-admin-borrar">
                                   <i class="fa-solid fa-trash-can"></i>
                                 </button>
