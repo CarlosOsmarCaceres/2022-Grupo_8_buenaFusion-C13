@@ -27,7 +27,14 @@
     display: flex;
     justify-content: center;
   }
-  
+  .button_index{
+    padding: 4px 34px 2px 34px;
+    border-radius: 23px;
+    background-color: rgb(24 24 86);
+    color: white;
+    border: none;
+    font-size: 19px;
+  }
   
   /* ---- Carrusel ------ */
   .slider_index {
@@ -79,7 +86,24 @@
     margin: 1rem 1rem 1rem 2rem;
     
   }
-  
+  /* .fa-whatsapp {
+    position: fixed;
+    top: 469px;
+    right: 29px;
+    background-color: #29a179;
+    color: white;
+    font-size: 35px;
+} */
+  .fa-whatsapp{
+    position: fixed;
+    top: 475px;
+    right: 26px;
+    background: #29a179;
+    color: white;
+    font-size: 43px;
+    -webkit-text-fill-color: #29a179;
+    -webkit-background-clip: text;
+  }
   .detalle_index {
     /* width: 250px;
     box-shadow: 0 0px 5px #006797;
@@ -94,13 +118,17 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding: 1rem;
+    padding: 9px;
     border-radius: 40px;
     margin-top: 14px;
     
   }
   .description{
-    align-items: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0.5rem;
+    /* align-items: center; */
   }
   
   article .precio {
@@ -108,7 +136,13 @@
     padding-top: 1 rem;
   }
   article .descuento {
-    color: rgb(52, 224, 52);
+    color: rgb(255 255 255);
+    background-color: #29a179;
+    width: max-content;
+    padding: 4px;
+    position: initial;
+    right: 6px;
+    border-radius: 1px 9px;
   }
   
   
@@ -122,6 +156,16 @@
       display: flex;
       justify-items: baseline;
     }
+    .fa-whatsapp{
+      position: fixed;
+      top: 573px;
+      right: 51px;
+      background: #29a179;
+      color: white;
+      font-size: 43px;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
   }
 
   @media(min-width: 570px) {
@@ -129,6 +173,16 @@
       display: flex;
       justify-items: baseline;
       
+    }
+    .fa-whatsapp{
+      position: fixed;
+      top: 573px;
+      right: 51px;
+      background: #29a179;
+      color: white;
+      font-size: 43px;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
     }
   }
     .product_index {

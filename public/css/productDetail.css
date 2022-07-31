@@ -14,11 +14,25 @@
     color: rgb(24 24 86);
     justify-content: center;
 }
-
+.subtituloDetail{
+    font-style: italic;
+    text-align: center;
+}
 .caracteristicas{
-    background-color: aliceblue;
+    /* background-color: aliceblue;
     padding: 35px;
-    border-radius: 10%;
+    border-radius: 10%; */
+    background-color: rgb(219 219 219 / 72%);
+    box-shadow: 10px 10px 16px 5px;
+    padding: 56px;
+    /* width: 285px; */
+    border-radius: 42px;
+    border: solid 0px rgb(24 24 86);
+    margin: 1rem 1rem 1rem 2rem;
+    color: rgb(24 24 86);
+    font-style: oblique;
+    line-height: 26px;
+    text-indent: 24px;
 }
 
 
@@ -29,10 +43,18 @@
 }
 
 .addCar{
-    border-radius: 6px;
+    /* border-radius: 6px;
     color: #006797;
     padding: 1% 3%;
-    margin: 2px;
+    margin: 2px; */
+    padding: 5px 34px 5px 34px;
+    border-radius: 23px;
+    background-color: rgb(24 24 86);
+    color: white;
+    border: none;
+    font-size: 19px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .container-cuadroImg{
     display: flex;
@@ -44,8 +66,11 @@
 }
 .cuadroImgBig{
     width: 250px;
-    /* height: 250px; */
-    box-shadow: 0 0px 5px #006797;
+    /* height: 250px;
+    box-shadow: 0 0px 5px #006797; */
+    max-height: 100%;
+    border-radius: 40px;
+    box-shadow: 0px 0px 9px;
 }
 
 .cuadroImg {
@@ -61,13 +86,21 @@
     margin-bottom: 22px;
 }
 .cuadroProducto {
-    background-color: aliceblue; 
+    /* background-color: aliceblue; 
     margin-bottom: 6px;
     width: min-content;
     padding: 3%;
     border-radius: 6px;
     border: solid 2px #006f97;
-    box-shadow: 0px 0px 5px white;
+    box-shadow: 0px 0px 5px white; */
+    background-color: rgb(219 219 219 / 72%);
+    box-shadow: 10px 10px 16px 5px;
+    padding: 19px;
+    width: 285px;
+    border-radius: 42px;
+    border: solid 0px rgb(24 24 86);
+    margin: 1rem 1rem 1rem 2rem;
+    color: rgb(24 24 86);
 }
 .cuadroProductoSmall {
     display: flex;
@@ -76,13 +109,21 @@
 }
 
 .car_detalle {
-    background-color: aliceblue;
+    /* background-color: aliceblue;
     margin: 4%;
     width: min-content;
     padding: 3%;
     border-radius: 6px;
     border: solid 2px #006f97;
-    box-shadow: 0px 0px 5px white;   
+    box-shadow: 0px 0px 5px white;    */
+    background-color: rgb(219 219 219 / 72%);
+    box-shadow: 10px 10px 16px 5px;
+    padding: 19px;
+    width: 285px;
+    border-radius: 42px;
+    border: solid 0px rgb(24 24 86);
+    margin: 1rem 1rem 1rem 2rem;
+    color: rgb(24 24 86);
 }
 
 .ul_detalle {
@@ -109,7 +150,7 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    color: rgb(24 24 86);
+    /* color: rgb(24 24 86); */
     padding: 1% 6%;
 }
 .descripcion .detalle {
@@ -138,7 +179,7 @@
     .titulo_detalle{
         display: flex;
         justify-content: center;
-        position: relative;
+        /* position: relative; */
         font-size: xx-large;
     }
     .descripcion {
@@ -154,5 +195,21 @@
         width: 470px;
         justify-content: center;
     }  
+    .caracteristicas{
+        /* background-color: aliceblue;
+        padding: 35px;
+        border-radius: 10%; */
+        background-color: rgb(219 219 219 / 72%);
+        box-shadow: 10px 10px 16px 5px;
+        padding: 56px;
+        /* width: 285px; */
+        border-radius: 42px;
+        border: solid 0px rgb(24 24 86);
+        margin: 1rem 1rem 1rem 2rem;
+        color: rgb(24 24 86);
+        font-style: oblique;
+        line-height: 26px;
+        text-indent: 24px;
+    }
 } 
  

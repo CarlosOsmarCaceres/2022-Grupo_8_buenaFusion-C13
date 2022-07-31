@@ -27,7 +27,11 @@
       <hr>
       <div class="contenedor">
         <div class="main_index" style="display: inline-flex;flex-wrap: wrap; justify-content: center;margin: unset; padding-top: 1rem;">
-        <br>
+          <a class="what" href="https://wa.me/541133500257"><i class="fa-brands fa-whatsapp"></i></a>
+          <br>
+        <!-- <div class="what"> -->
+          
+        <!-- </div> -->
         <% productos.forEach(element => { %>
           <section class="productos-fran">
               <div class="home_omar">
@@ -38,58 +42,27 @@
                       <strong><p class="precio">$<%= element.price %></style></p></strong> 
                       <strong><p class="descuento"><%= element.discount %>% OFF</p></strong> 
                       <strong class="description"><%= element.name  %></strong>
-                    <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
+                      <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
                     </div>
                   </article>
                 </a>
               </div>
-  
               <br>
-            </section>
+          </section>
             <% }) %>
-          </DIV> 
-          <div class="carrusel">
+        </DIV> 
+          
+          <div class="carrusel" >           
             <div class="carrusel-items">
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656367204403_img_.jpg" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656372396011_img_.jpg" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656372490104_img_.jpg" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656372532967_img_.jpg" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656377398820_img_.png" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656377640316_img_.png" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656367204403_img_.jpg" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656372396011_img_.jpg" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656372532967_img_.jpg" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656378294545_img_.png" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1658950444762_img_.jpg" alt="" />
-              </div>
-              <div class="carrusel-item">
-                <img class="img_carrusel_footer" src="img/products/1656378963354_img_.png" alt="" />
-              </div>
-            </div>
-          </div>
-        <!-- Fin del Home -->
-        <br>
+              <% productos.forEach(element => { %>
+              <a class="carrusel-item" href="../producto/detalle/<%= element.id  %>">
+                <img class="img_carrusel_footer" src="/img/products/<%= element.image  %>" alt="/img/products/<%= element.image  %>" />
+              </a>
+              <% }) %>              
+            </div>            
+          </div>         
+          <!-- Fin del Home -->
+          <br>
         <!-- Inicio del Footer -->
       </div>
     <%-include("../partials/footer.ejs")%>

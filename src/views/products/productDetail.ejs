@@ -11,7 +11,7 @@
             <section class="section_detalle">
                 <!-- Titulo del producto -->
                 <div>
-                    <h1 class="titulo_detalle"><%= product.name %></h1>      
+                    <h2 class="titulo_detalle"><%= product.name %></h1>      
                 </div>
                 <div class="ImgCar_detalle">
                     <!-- Cuadro de producto Img-->
@@ -20,14 +20,14 @@
                         <div class="container-cuadroImg" width>
                             <img class="cuadroImgBig" src="/img/products/<%= product.image %>" alt="/img/products/<%= product.image %>">
                         </div> 
-                        <div class="cuadroProductoSmall">
+                        <!-- <div class="cuadroProductoSmall">
                             <div class="cuadroImgSmall">
                                 <img class="cuadroImg" src="/img/products/<%= product.image %>" alt="/img/products/<%= product.image %>">
                             </div>
                             <div class="cuadroImgSmall">
                                 <img class="cuadroImg" src="/img/products/<%= product.image %>" alt="/img/products/<%= product.image %>">
                             </div>    
-                        </div>
+                        </div> -->
 
                     </article>  
 
@@ -42,7 +42,7 @@
                             <li>
                                 <div class="containerCar-Flex">
                                     <p>Precio x Unidad</p>
-                                    <h5>$<%= product.price %></h5>
+                                    <p>$<%= product.price %></p>
                                 </div>
                             </li>
                             <li>
@@ -70,7 +70,7 @@
                     <!-- Caracteristicas -->
                     <div class="descripcion_detalle">
                         <div class="detalle">
-                        <h4>Caracteristicas</h4>
+                        <h2 class="subtituloDetail">Caracteristicas</h2>
                         <p class="caracteristicas"><%= product.description %></p>
                         </div>
                     </div>
