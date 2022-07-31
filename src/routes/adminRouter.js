@@ -9,6 +9,8 @@ const productCreateValidator = require('../validations/productCreateValidator');
 const productEditValidator = require("../validations/productEditValidator");
 const adminUsersController = require("../controllers/adminUserControllers")
 const uploadAvatar = require("../middlewares/uploadAvatar")
+const adminCategoryController = require("../controllers/adminCategoryController");
+
 
 // products
 router.get("/", userSessionCheck, adminCheck, aControllers.index) 
@@ -27,6 +29,12 @@ router.get("/usuarios", /* userSessionCheck, adminCheck, */ adminUsersController
 //router.post("/usuarios",/* uploadFile.single("image"),productCreateValidator  ,*/ adminUsersController.userCreate)
 router.put("/usuarios/:id",uploadAvatar.single("image"),/* productEditValidator, */ adminUsersController.userEditar)
 router.delete("/usuarios/:id", adminUsersController.userDelete)
-
+// CRUD CATEGORIA 
+router.get('/categories', /* userSessionCheck, adminCheck, */ adminCategoryController.list );
+router.get('/categories/addCategory', /* userSessionCheck, adminCheck, */ adminCategoryController.categoryAdd );
+router.post('/categories', adminCategoryController.categoryCreate );
+router.get('/categories/editCategory/:id', /* userSessionCheck, adminCheck, */ adminCategoryController.categoryEdit );
+router.put('/categories/editCategory/:id', adminCategoryController.categoryUpdate );
+router.delete('/categories/delete/:id', adminCategoryController.categoryDelete); 
 
  module.exports= router
