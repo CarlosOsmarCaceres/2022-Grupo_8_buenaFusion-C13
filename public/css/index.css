@@ -101,8 +101,10 @@
     background: #29a179;
     color: white;
     font-size: 43px;
-    -webkit-text-fill-color: #29a179;
-    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; */
+      border-radius: 27px;
+      padding: 7px 9px 7px 9px;
   }
   .detalle_index {
     /* width: 250px;
@@ -163,8 +165,10 @@
       background: #29a179;
       color: white;
       font-size: 43px;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
+      /* -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; */
+      border-radius: 27px;
+      padding: 7px 9px 7px 9px;
     }
   }
 
@@ -181,8 +185,10 @@
       background: #29a179;
       color: white;
       font-size: 43px;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
+      /* -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; */
+      border-radius: 27px;
+      padding: 7px 9px 7px 9px;
     }
   }
     .product_index {
