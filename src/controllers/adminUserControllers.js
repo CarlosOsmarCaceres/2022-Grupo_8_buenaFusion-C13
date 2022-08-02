@@ -51,10 +51,13 @@ module.exports = {
   // },
   //Vista de Edicion de Usuario
   userEdit: (req, res) => {
-        let usuario = User.findByPk(req.params.id)
+        let usuario = User.findByPk(req.params.id, {
+          include: ['roluser']
+        })
         let categorias = RolUser.findAll()
         Promise.all([usuario, categorias])
         .then(([usuario, categorias]) => {
+         /*  return res.send(categorias) */
             res.render("admin/products/editUser", {
                 title: "Editar Usuario",
                 usuario,

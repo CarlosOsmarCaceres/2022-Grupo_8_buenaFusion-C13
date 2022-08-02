@@ -54,8 +54,8 @@
   <label for="pass" class="form-label">Categorias</label>
   <select name="pass" id="pass">
     <option value="" selected hidden>Seleccione una categoria..</option>
-    <% categorias.forEach(({id, rol}) => { %>
-        <option value="<%= id %>"><%= rol %> </option>
+    <% categorias.forEach(({id, roluser_id}) => { %>
+        <option value="<%= id %>"><%= roluser_id %> </option>
     <% }) %> 
   </select>
   <% if (locals.errors && errors.pass) { %>
