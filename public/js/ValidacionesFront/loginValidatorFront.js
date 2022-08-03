@@ -64,7 +64,7 @@ window.addEventListener("load",()=>{
         }
 
       if(!errors){
-            alert("Validado!")
+            // alert("Validado!")
             $form.submit()
         }
     })

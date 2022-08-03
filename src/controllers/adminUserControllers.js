@@ -57,7 +57,8 @@ module.exports = {
         let categorias = RolUser.findAll()
         Promise.all([usuario, categorias])
         .then(([usuario, categorias]) => {
-         /*  return res.send(categorias) */
+         /* Returning the categories to the user. */
+         // return res.send(categorias)
             res.render("admin/products/editUser", {
                 title: "Editar Usuario",
                 usuario,

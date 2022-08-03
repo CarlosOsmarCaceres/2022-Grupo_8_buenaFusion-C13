@@ -154,7 +154,7 @@ function qs(element) {
           }
         }
       if(!errores){
-            alert("Registrado con exito!")
+            // alert("Registrado con exito!")
             $form.submit()
         }
     })

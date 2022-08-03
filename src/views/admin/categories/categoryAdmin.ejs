@@ -18,8 +18,8 @@
             </form>
         </article>
 
-        <article class="container-fluid">
-            <table class="table table-striped table-hover">
+        <div class="datatable-container">
+            <table class="datatable">
                 <thead>
                   <tr class="text-center">
                     <th scope="col">id</th>
@@ -32,12 +32,12 @@
                         <tr class="text-center">
                             <th scope="row"><%=categoria.id%></th>
                             <td><%=categoria.nameCategory%></td>
-                            <td>
-                              <a href="/administrador/categories/editCategory/<%- categoria.id %>" class="btn" id="btn-admin-modificacion">
+                            <td class="botonEditDelet">
+                              <a href="/administrador/categories/editCategory/<%- categoria.id %>" class="botonEditar" id="btn-admin-modificacion">
                                 <i class="fa-solid fa-pen-to-square"></i>
                               </a>
                               <form action="/administrador/categories/delete/<%- categoria.id %>?_method=DELETE" method="POST">
-                                <button type="submit" class="btn" id="btn-admin-borrar">
+                                <button type="submit" class="votonEliminar" id="btn-admin-borrar">
                                   <i class="fa-solid fa-trash-can"></i>
                                 </button>
                               </form>
@@ -46,7 +46,7 @@
                     <% }) %>
                 </tbody>
               </table>
-        </article>
+            </div>
         <a href="/">Salir del administrador</a>
     </main>
 

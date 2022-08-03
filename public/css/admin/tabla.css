@@ -1,0 +1,83 @@
+.datatable-container{
+    display: flex;
+    justify-content: center;
+}
+.datatable{
+    display: block;
+    background-color: rgb(219 219 219 / 72%);
+    box-shadow: 10px 10px 16px 5px grey;
+    width: fit-content;
+    border-radius: 42px;
+    /* border: solid 0px rgb(24 24 86); */
+    margin: 1rem 1rem 1rem 2rem;
+    /* padding-bottom: 43px; */
+    PADDING: 20PX;
+}
+.paginaAdm{
+    color: white;
+}
+.datatableBtn{
+    display: block;
+    background-color: rgb(219 219 219 / 72%);
+    box-shadow: 10px 10px 16px 5px grey;
+    width: fit-content;
+    border-radius: 42px;
+    /* border: solid 0px rgb(24 24 86); */
+    margin: 1rem 1rem 1rem 2rem;
+    /* padding-bottom: 43px; */
+    PADDING: 20PX;
+}
+.botonEditDelet{
+    display: flex;
+    width: fit-content;
+}
+.votonEliminar{
+    border: none;
+    background-color: #ff000000;
+}
+th{
+    padding: 10px;
+}
+i{
+    padding: 10px;
+}
+.fa-pen-to-square{
+    color: #00692e;;
+    box-shadow: 1px 1px grey;
+    border-radius: 7px;
+}
+.fa-trash-can{
+    color: red;
+    box-shadow: 1px 1px grey;
+    border-radius: 7px;
+}
+.tablaCuadro{
+    font-family: fangsong;
+    color: #084298;
+    font-weight: 600;
+
+
+}
+.tablaTitulo{
+    color: #084298;
+    border-bottom-color: #ffffffa8;
+    border-top-color: #a31f1f00;
+    border-left-color: #ff000000;
+    border-right-color: #ff000000;
+    border-style: ridge;
+    border-width: 5px;
+    font-style: oblique;
+    font-size: larger;
+    font-family: fangsong;
+    text-transform: none;
+}
+.tho {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+body {
+    
+	background-image: url(/img/fondo/fondo.jpg);
+    
+  }

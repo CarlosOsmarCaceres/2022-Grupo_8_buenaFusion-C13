@@ -2,49 +2,56 @@
 <html lang="en">
 <%-include("../partials/head") %>
 <body>
- <%-include("../partials/header") %> 
- <main class="container min-vh-100 pt-5">
-    <table class="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Categoría</th>
-            <!-- <th scope="col">Emprendimiento</th> -->
-            <th scope="col">Stock</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-            <% productos.forEach(producto => { %>
-                <tr>
-                  <th scope="row"><%- producto.id %></th>
-                  <td><%- producto.name %></td>
-                  <td><%- producto.price %></td>
-                  <td><%- producto.categoryId %></td>
-                  <td><%- producto.projectId %></td>
-                  <td><%- producto.stock %></td>
-                  <td>
-                    <a href="/administrador/productos/editar/<%-producto.id%>" class="btn btn-success">
-                      <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
+<%-include("../partials/header") %> 
 
-                    <form action="/administrador/productos/<%= producto.id %>?_method=DELETE" method="POST">
-                      <button class="btn btn-danger" type="submit" >
-                        <i class="fa-solid fa-trash-can"></i>
-                      </button>
-                    </form>
-                    
-                  </td>
-                </tr>
-              <% }) %>  
-            </tbody>
-          </table>
-      </main>
+<div class="datatable-container">
+  <button class="datatableBtn">
+    <a class="fa-solid fa-plus" aria-current="page" href="/administrador/productos/agregar">Agregar</a>
+    <!-- <i class="material-icons"><a class="nav-link active" aria-current="page" href="/administrador/productos/agregar">Agregar</a></i> -->
+  </button>
+</div>
 
- <%-include("../partials/footer") %> 
-    <!--Bootstrap-->
+<div class="datatable-container">
+  <table class="datatable">
+    <thead class="tablaTitulo">
+      <tr class="   ">
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Categoría</th>
+        <th scope="col">Stock</th>
+        <th scope="col"><!-- <i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i> --></th>
+      </tr>
+    </thead>
+    <tbody class="tablaCuadro">
+      <% productos.forEach(producto => { %>
+        <tr class="">
+          <th scope="row"><%- producto.id %></th>
+          <th><%- producto.name %></td>
+          <th>$<%- producto.price %></td>
+          <td class="text-center"><%- producto.category_id %></td>
+          <td><%- producto.stock %></td>
+          <td class="botonEditDelet">
+            <a href="/administrador/productos/editar/<%-producto.id%>" class="botonEditar">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </a>  
+            <form action="/administrador/productos/<%= producto.id %>?_method=DELETE" method="POST">
+              <button class="votonEliminar" type="submit" id="btn-admin-borrar">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </form>
+            
+          </td>
+        </tr>
+      <% }) %>  
+    </tbody>
+  </table>
+</div>
+
+<!-- Tabla vieja -->
+
+<%-include("../partials/footer") %> 
+<!--Bootstrap-->
 <%-include("../partials/script") %> 
 </body>
 </html>

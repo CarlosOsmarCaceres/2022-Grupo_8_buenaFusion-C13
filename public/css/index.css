@@ -23,6 +23,11 @@
   .home_omar{
     display: flex;
   }
+  .text-center{
+    padding-left: 10%;
+    color: rgb(24 24 86);
+    font-family: 'FontAwesome';
+  }
   .Container_omar{
     display: flex;
     justify-content: center;

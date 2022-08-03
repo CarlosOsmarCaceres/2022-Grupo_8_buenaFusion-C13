@@ -3,9 +3,9 @@
 <%-include("../partials/head") %>
 <body>
  <%-include("../partials/header") %>   
-<main class="container"> 
-    <form  id="form" action="/administrador/productos/<%=producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-    <fieldset class="rounded border w-90 mx-auto p-4" id="fondo-mainAdmin">
+<main class="datatable-container"> 
+    <form class="datatable" id="form" action="/administrador/productos/<%=producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <fieldset class="datatable" id="fondo-mainAdmin">
         <legend class="text-center">EDITAR PRODUCTO: <%= producto.name %> </legend> 
     <div class="mb-3 col-md-6">
         <label for="name" class="form-label">Nombre</label>
