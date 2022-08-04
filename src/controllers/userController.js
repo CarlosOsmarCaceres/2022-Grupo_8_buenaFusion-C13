@@ -78,7 +78,6 @@ module.exports= {
             })
             .catch(error => res.send(error))
         }
-        /*Cuando agregamos el else nos tira error!!!!!*/
         else{
             res.render("user/register",{
             title: "registro",
@@ -97,6 +96,23 @@ module.exports= {
         }
         res.redirect("/usuario")
     },
+    perfilEdit:(req, res) => {
+        let id = +req.session.usuario.id
+        db.User.findOne({
+            where: {
+                id
+            }
+        })
+        .then((user) => {
+            res.render('user/editPerfil', {
+                title: "Perfil",
+                old: req.body,
+                user,
+                session: req.session
+            }) 
+        })
+        .catch(error => res.send(error))
+    },
     editPerfil : async (req, res) => {
         try{
         let userEdit = await 
@@ -104,7 +120,7 @@ module.exports= {
         
         await db.User.update({
         ...req.body,
-        avatar: req.file? req.file.filename : req.session.usuario.avatar
+        avatar: req.file ? req.file.filename : req.session.usuario.avatar
         },{
          where : {id : req.params.id}
         })
@@ -124,11 +140,9 @@ module.exports= {
             /* roluser_id : user.roluser_id */
         }
         res.locals.user = req.session.usuario;
-        res.redicrect('/')
+        res.redirect('/')
         } catch (error) {
         console.log(error);
         }
     }
 }
-
-    

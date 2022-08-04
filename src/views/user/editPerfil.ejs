@@ -10,7 +10,7 @@
 
     <div class="divForm_login">
       <a class="retornHome_login" href="/usuario">Regresar al Login</a>
-      <form  class="form_registro" id="form" action="/usuario/perfil/<%= usuario.id %>?_method=PUT" method="post" enctype="multipart/form-data"><!-- action="registro" method="post" enctype="multipart/form-data"   en action va la ruta -->
+      <form  class="form_registro" id="form" action="/usuario/perfil/<%= user.id %>?_method=PUT" method="post" enctype="multipart/form-data"><!-- action="registro" method="post" enctype="multipart/form-data"   en action va la ruta -->
         <div class="subtituloRegistro">
             <h2>Perfil Admin</h2>
             <i class="fa-solid fa-key"></i>
@@ -21,34 +21,20 @@
             <h2>Datos personales</h2>
         </div>
         <div class="box-1_registro">
-            <input class="input_register" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" value="<%= locals.old && old.nombre ? old.nombre : "" %>">
+            <input class="input_register" type="text" name="nombre" id="nombre" placeholder="Ingresar nombre" value="<%= user.nombre %>">
             <span  style="color: red;" class="error"  id="nombreErrors" ></span>
             <% if (locals.errors && errors.nombre) { %>           
               <small class="text-danger"><%= errors.nombre.msg %></small>
               <% } %>
 
-            <input class="input_register" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido" value="<%= locals.old && old.apellido ? old.apellido : "" %>">
+            <input class="input_register" type="text" name="apellido" id="apellido" placeholder="Ingresar apellido" value="<%= user.apellido %>">
             <span  style="color: red;"  id="apellidoErrors"></span>
             <% if (locals.errors && errors.apellido) { %>
               <small class="text-danger"><%= errors.apellido.msg %></small>
               <% } %>
-
-            <input class="input_register" type="date" name="fecha" id="fecha" placeholder="Seleccionar fecha" value="<%= locals.old && old.fecha ? old.fecha : "" %>">
-            <% if (locals.errors && errors.fecha) { %>
-              <small class="text-danger"><%= errors.fecha.msg %></small>
-              <% } %>
-              
-            <input class="input_register" type="tel" name="telefono" id="telefono" placeholder="Ingrese su Telefono/Celular" value="<%= locals.old && old.telefono ? old.telefono : "" %>">
-            <% if (locals.errors && errors.telefono) { %>
-              <small class="text-danger"><%= errors.telefono.msg %></small>
-              <% } %>
-              
-            <input class="input_register" type="email" name="email" id="email" placeholder="Correo electronico" value="<%= locals.old && old.email ? old.email : "" %>">
-            <span style="color: red;" id="emailErrors"></span>
-            <!-- <input class="input_register" type="password" name="pass" id="pass" placeholder="Escriba una contraseña">   -->
-            <% if (locals.errors && errors.email) { %>
-              <small class="text-danger"><%= errors.email.msg %></small>
-              <% } %>
+              <p> </p>
+              <p class="input_register"><%= user.email %></p>
+              <p> </p>
           </div>
         <!-- avata -->
         <h2>Avatar</h2>
@@ -57,15 +43,13 @@
           <!-- <div class="box-2 mt-3"> -->
             <div class="img-container" id="img-preview">             
             </div>
+            <br>
             <input class="avatarRegister"type="file" name="avatar" id="formFile">
             <!-- <input class="form-control mt-3" type="file" id="formFile"> -->
             <span  style="color: red;"  id="imgErrors"></span>
         <!-- </div> -->
         </div>       
-         <div class="subtitulo_registro">
-            <i class="fa-solid fa-lock"></i>
-            <h2>Contraseña</h2>
-        </div>  
+         
         <div class="boton_registro"> 
             <button class="boton-boton" type="submit">Editar</button>
             <span style="color: red;" id="submitErrors"></span>

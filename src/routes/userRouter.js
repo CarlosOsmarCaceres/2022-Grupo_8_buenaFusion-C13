@@ -6,9 +6,6 @@ const userInSessionCheck = require ('../middlewares/userInSessionCheck');
 const registerValidator = require("../validations/registerValidator")
 const loginValidator = require("../validations/loginValidator")
 
-
-
-
 /* GET - Renderiza vista login */
 router.get("/", userInSessionCheck, usuarioController.logeo) 
 router.post("/",loginValidator ,usuarioController.procesoLogin)
@@ -20,10 +17,8 @@ router.post("/registro", uploadFile.single("avatar"),registerValidator ,usuarioC
 /* Ruta donde se elimina la Session */
 router.get("/signOff", usuarioController.singOff)
 
-router.get('/perfil', usuarioController.editPerfil);
+router.get('/perfil', usuarioController.perfilEdit);
 //router.put('/perfil/:id', editProfile)
 router.put('/perfil/:id',uploadFile.single('avatar'),usuarioController.editPerfil)
-
-
 
 module.exports= router;
