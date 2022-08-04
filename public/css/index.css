@@ -11,7 +11,12 @@
     padding-left: 20px;
   } 
   
-  
+  .contenedorSearch {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
  /* MAIN */
  .main_index{
    display: inline-flex;

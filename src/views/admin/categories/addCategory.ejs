@@ -1,24 +1,26 @@
 <!DOCTYPE html>
+<html lang="en">
     <%-include("../partials/head")%>
 <body>
     <%-include("../partials/header")%>
 
-    <main class="addP">
-        <form action="/administrador/categories" method="POST">
-            <div class="inp-cont">
-                <label for="name">Nombre de la Categoría</label>
-                <input type="text" name="name" placeholder="Ej: Accesorios" id="name">
+    <main class="datatable-container">
+        <form class="datatable" action="/administrador/categories" method="POST">
+            <div class="a">
+                <label for="name">Agregar Categoría</label>
+                <input class="form-control" type="text" name="name" placeholder="Ej: Accesorios" id="name">
             </div>
 
-            <div class="inp-cont">
-                <button type="submit" class="btn-add">Crear</button>
+            <div class="container">
+                <button type="submit" class="btn btn-primary">Crear</button>
             </div>
         </form>
 
-        <div class="backTo">
+        <!-- <div class="backTo">
             <a href="/administrador/categories">Volver</a>
-        </div>
+        </div> -->
     </main>
 </body>
 <%-include("../partials/footer")%>
+<%-include("../partials/script") %> 
 </html>

@@ -1,22 +1,24 @@
 <!DOCTYPE html>
+<html lang="en">
 <%-include("../partials/head")%>
 <body>
     <%-include("../partials/header")%>
 
     <main>
-        <article >
-            <button >
+        <article class="datatable-container">
+            <button class="datatableBtn">
+              <a class="fa-solid fa-plus" aria-current="page" href="/administrador/categories/addCategory">Agregar</a>
                 <a href="/administrador/categories/addCategory">
-                    Nueva Categoría
+                   
                 </a>
             </button>
         </article>
-        <article >
+        <!-- <article >
             <form action="/administrador/categories/searchCategory" method="get">
                 <input type="text" name="search" id="search" placeholder="Buscar Categoría">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-        </article>
+        </article> -->
 
         <div class="datatable-container">
             <table class="datatable">
@@ -47,11 +49,16 @@
                 </tbody>
               </table>
             </div>
-        <a href="/">Salir del administrador</a>
+        <!-- <a href="/">Salir del administrador</a> -->
     </main>
 
     
    
 </body>
+<br>
+<br>
+<br>
+<br>
 <%-include("../partials/footer")%>
+<%-include("../partials/script") %> 
 </html>

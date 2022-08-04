@@ -1,8 +1,14 @@
 #fondo-mainAdmin{
-    background: linear-gradient(to right, #71C9CE, #A6E3E9);
-    
+    /* background: linear-gradient(to right, #71C9CE, #A6E3E9); */
+    font-family: fangsong;
+    color: #084298;
+    font-weight: 600;
 }
-
+.active{
+    color: #00692e;
+    box-shadow: 1px 1px grey;
+    border-radius: 7px;
+}
 #nav-headerAdmin{
     background-color: white;
 

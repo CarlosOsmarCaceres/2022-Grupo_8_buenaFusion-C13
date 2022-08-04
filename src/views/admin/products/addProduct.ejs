@@ -4,23 +4,23 @@
 <body>
 <%-include("../partials/header") %>  
 <main class="datatable-container"> 
-    <form class="datatable" action="/administrador/productos" method="POST"  id="form" enctype="multipart/form-data">
+    <form class="" action="/administrador/productos" method="POST"  id="form" enctype="multipart/form-data">
     <fieldset class="datatable" id="fondo-mainAdmin">
         <legend class="text-center">AGREGAR PRODUCTO</legend> 
-      <!-- <div class="mb-3 col-md-6">
+      <!-- <div class="a">
           <label for="name" class="form-label">Nombre</label>
           <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto">
           <span  style="color: red;" class="error"  id="errorsName" ></span>
     
       </div> 
-      <div class="mb-3 col-md-6">
+      <div class="a">
           <label for="price" class="form-label">Precio</label>
           <input type="number" name="price" class="form-control" id="price" placeholder="ej:300">
           <span  style="color: red;"  id="errorsPrice" ></span>
       </div> -->
 
 
-    <div class="mb-3 col-md-6">
+    <div class="a">
         <label for="name" class="form-label">Nombre</label>
         <input type="text" name="name" class="form-control" id="name" placeholder="Ingresa nombre de producto" value="<%= locals.old && old.name ? old.name : "" %>">
         <span  style="color: red;" class="error"  id="errorsName" ></span>
@@ -28,7 +28,7 @@
           <small class="text-danger"><%= errors.name.msg %></small>
           <% } %>
 </div>
-    <div class="mb-3 col-md-6">
+    <div class="a">
         <label for="price" class="form-label">Precio</label>
         <input type="number" name="price" class="form-control" id="price" placeholder="ej:300" value="<%= locals.old && old.price ? old.price : "" %>">
         <span  style="color: red;"  id="errorsPrice" ></span>
@@ -37,7 +37,7 @@
           <% } %>
     </div>
 
-<div class="mb-3 col-md-6">
+<div class="a">
     <label for="discount" class="form-label">Descuento</label>
     <input type="number" name="discount" class="form-control" id="discount" placeholder="Ingresar descuento" value="<%= locals.old && old.discount ? old.discount : "" %>">
     <span  style="color: red;"  id="errorsDiscount" ></span>

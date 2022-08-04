@@ -59,7 +59,7 @@ module.exports = {
         .then(([usuario, categorias]) => {
          /* Returning the categories to the user. */
          // return res.send(categorias)
-            res.render("admin/products/editUser", {
+            res.render("admin/categorieseditCategory", {
                 title: "Editar Usuario",
                 usuario,
                 categorias,
@@ -77,8 +77,8 @@ module.exports = {
       let usuario = User.findByPk(req.params.id)
       User.update({
           ...req.body,
-          image: req.file ? req.file.filename : usuario.image,
-          stock: req.body.stock ? true : false,
+          // image: req.file ? req.file.filename : usuario.image,
+          // stock: req.body.stock ? true : false,
         },
         {
             where : { id : req.params.id}

@@ -7,8 +7,8 @@
     <div class="omar">
         <h2 class="products-title">Resultados de la búsqueda <% keyword %>  </h2>
     </div>   
-<div class="contenedor">   
-    <div class="main_index" style="display: inline-flex;flex-wrap: wrap; justify-content: center;margin: unset; padding-top: 1rem;"></div>
+<div class="contenedorSearch">   
+    <div class="main_index" style="display: inline-flex;flex-wrap: wrap;"></div>
     <% if(productos.length > 0) { %>
     <% productos.forEach(element => { %>
       <section class="productos-fran">
@@ -36,6 +36,9 @@
                 <% } %>
             
 </div>
+<br>
+<br>
+<br>
 <%-include("../partials/footer.ejs")%>
 </body>
 </html>
