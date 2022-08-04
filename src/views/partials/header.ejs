@@ -21,6 +21,9 @@
         <li class="nav-menu-item" style="color:white ;">
           Bienvenid@ <%= session.usuario.nombre %>
          </li>     
+         <li  class="nav-menu-item">
+          <a href="/usuario/perfil" class="nav-menu-link nav-link">Perfil</a>
+        </li>
         <% if (session.usuario.roluser_id === 2) { %>
         <li  class="nav-menu-item">
           <a href="/administrador" class="nav-menu-link nav-link">ADMIN</a>

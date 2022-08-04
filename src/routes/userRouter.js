@@ -20,5 +20,10 @@ router.post("/registro", uploadFile.single("avatar"),registerValidator ,usuarioC
 /* Ruta donde se elimina la Session */
 router.get("/signOff", usuarioController.singOff)
 
+router.get('/perfil', usuarioController.editPerfil);
+//router.put('/perfil/:id', editProfile)
+router.put('/perfil/:id',uploadFile.single('avatar'),usuarioController.editPerfil)
+
+
 
 module.exports= router;

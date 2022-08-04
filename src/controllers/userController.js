@@ -96,6 +96,38 @@ module.exports= {
             res.cookie("fusionCookie", "", {maxAge: -1})
         }
         res.redirect("/usuario")
+    },
+    editPerfil : async (req, res) => {
+        try{
+        let userEdit = await 
+        db.User.findByPk(req.params.id)
+        
+        await db.User.update({
+        ...req.body,
+        avatar: req.file? req.file.filename : req.session.usuario.avatar
+        },{
+         where : {id : req.params.id}
+        })
+        let user = await 
+        db.User.findByPk(req.params.id)
+        if(req.file){
+            if (fs.existsSync(path.join(__dirname, "../../public/img/avatar", user.avatar)) &&
+                user.avatar !== "default-image.png"){
+                fs.unlinkSync( path.join(__dirname, "../../public/img/avatar", userEdit.avatar))
+            }
+        }        
+        req.session.usuario = {
+            id: user.id,
+            nombre : user.nombre,
+            apellido : user.apellido,
+            avatar : user.avatar,
+            /* roluser_id : user.roluser_id */
+        }
+        res.locals.user = req.session.usuario;
+        res.redicrect('/')
+        } catch (error) {
+        console.log(error);
+        }
     }
 }
 
