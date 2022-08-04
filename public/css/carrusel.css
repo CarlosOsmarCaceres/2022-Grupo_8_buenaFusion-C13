@@ -42,4 +42,26 @@ body {
   .carrusel-item:hover {
     transform: scale(1.2);
   }
+  .galeria{
+    padding: 16px;
+    overflow-y: auto;
+  }
+  .image-principal img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .lista-imagenes img{
+    width: 100%;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    /* display: block; */
+  }
+  lista-imagenes{
+    display: flex;
+    overflow-y: auto;
+    margin-top: block;
+  }
   
