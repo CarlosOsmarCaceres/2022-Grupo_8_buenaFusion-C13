@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partials/head.ejs'), ({title: 'Resultados de tu búsqueda'}) %>
+ <body>
+    <!-- Inicio Header -->
+    <%-include("../partials/header.ejs") %>
+    <div class="omar">
+        <h2 class="products-title">Resultados de la búsqueda <% keyword %>  </h2>
+    </div>   
+<div class="contenedor">   
+    <div class="main_index" style="display: inline-flex;flex-wrap: wrap; justify-content: center;margin: unset; padding-top: 1rem;"></div>
+    <% if(productos.length > 0) { %>
+    <% productos.forEach(element => { %>
+      <section class="productos-fran">
+          <div class="home_omar">
+            <a class="Container_omar" href="../producto/detalle/<%= element.id  %>">
+              <article class="product_index">
+                <img width="100%" class="img_index_product" src="/img/products/<%= element.image  %>" alt="/img/products/<%= element.image  %>">
+                <div class="detalle_index">
+                  <strong><p class="precio">$<%= element.price %></style></p></strong> 
+                  <strong><p class="descuento"><%= element.discount %>% OFF</p></strong> 
+                  <strong class="description"><%= element.name  %></strong>
+                  <button class="button_index"> <i class= "icono fa-solid fa-cart-plus"></i></button>
+                </div>
+              </article>
+            </a>
+          </div>         
+         
+      </section>    
+      <% }) %>
+            <% } else { %>		
+            
+                        <div class="col-12">
+                            <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+                        </div>
+                <% } %>
+            
+</div>
+<%-include("../partials/footer.ejs")%>
+</body>
+</html>

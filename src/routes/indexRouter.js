@@ -3,8 +3,9 @@ const express = require("express");/* aca requiero exprees */
 const iControllers = require("../controllers/indexControllers") /* aca estamos en routes, quiero entrar en controllers */
 
 
-router.get("/", iControllers.index) 
 
+router.get("/", iControllers.index) 
+router.get("/search", iControllers.search)
 
 
 
