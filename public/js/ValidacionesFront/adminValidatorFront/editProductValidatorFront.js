@@ -120,7 +120,7 @@ $submitErrors = qs("#submitErrors")
             }
         } 
          if(!errores){
-            alert("Producto Editado!")
+            //alert("Producto Editado!")
             $form.submit()
         }
  

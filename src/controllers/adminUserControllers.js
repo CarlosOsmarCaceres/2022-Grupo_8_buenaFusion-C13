@@ -51,34 +51,48 @@ module.exports = {
   // },
   //Vista de Edicion de Usuario
   userEdit: (req, res) => {
-        let usuario = User.findByPk(req.params.id, {
+    let usuario = User.findByPk(req.params.id, {
+      include : ['roluser']
+    })
+    let categorias = RolUser.findAll()
+    Promise.all([usuario, categorias])
+    .then(([usuario, categorias]) => {
+      //return res.send(usuario)
+      res.render("admin/products/editUser", {
+        title: "Editar Usuario",
+        usuario,
+        categorias,
+        session: req.session, //
+    });
+    })
+    .catch(errors => res.send(errors))
+    
+       /*  let usuario = User.findByPk(req.params.id, {
           include: ['roluser']
         })
         let categorias = RolUser.findAll()
         Promise.all([usuario, categorias])
         .then(([usuario, categorias]) => {
-         /* Returning the categories to the user. */
-         // return res.send(categorias)
-            res.render("admin/categorieseditCategory", {
+
+          return res.send(categorias)
+            res.render("admin/products/editUser", {
                 title: "Editar Usuario",
                 usuario,
                 categorias,
                 session: req.session, //
             });
-        })
+        }) */
   },
   //Edita el usuario
   userEditar: (req, res) => {
-
+    //return res.send(req.body)
     let errors = validationResult(req);
         //res.send(errors)
     if(errors.isEmpty()){
 
-      let usuario = User.findByPk(req.params.id)
+    
       User.update({
           ...req.body,
-          // image: req.file ? req.file.filename : usuario.image,
-          // stock: req.body.stock ? true : false,
         },
         {
             where : { id : req.params.id}

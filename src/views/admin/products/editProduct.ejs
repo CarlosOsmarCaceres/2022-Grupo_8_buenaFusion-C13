@@ -3,11 +3,11 @@
 <%-include("../partials/head") %>
 <body>
  <%-include("../partials/header") %>   
- <br>
+ <h1 class="paginaAdm">PRODUCTO</h1>
 <main class="datatable-container"> 
-    <form class="datatable" id="form" action="/administrador/productos/<%=producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form class="" id="form" action="/administrador/productos/<%=producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
     <fieldset class="datatable" id="fondo-mainAdmin">
-        <legend class="text-center">EDITAR PRODUCTO: <%= producto.name %> </legend> 
+        <legend class="text-center">EDITAR PRODUCTO: <br> <%= producto.name %> </legend> 
     <div class="mb-3 col-md-6">
         <label for="name" class="form-label">Nombre</label>
         <input type="text" name="name" class="form-control" id="name" value="<%= producto.name %>">

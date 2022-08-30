@@ -2,19 +2,20 @@
 <html lang="en">
 <%-include("../partials/head") %>
 <body>
- <%-include("../partials/header") %>   
-<main class="container"> 
-    <form action="/administrador/usuarios/<%=usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-    <fieldset class="rounded border w-90 mx-auto p-4" id="fondo-mainAdmin">
+ <%-include("../partials/header") %>  
+ <h1 class="paginaAdm">USUARIO</h1> 
+<main class="datatable-container"> 
+    <form action="/administrador/usuarios/<%=usuario.id %>?_method=PUT" method="POST">
+    <fieldset class="datatable" id="fondo-mainAdmin">
         <legend class="text-center">PERFIL DE USUARIO: <%= usuario.name %> </legend> 
-    <!-- <div class="mb-3 col-md-6">
+    <div class="mb-3 col-md-6">
         <label for="nombre" class="form-label">Nombre</label>
         <input type="text" name="nombre" class="form-control" id="nombre" value="<%= usuario.nombre %>">
         <% if (locals.errors && errors.nombre) { %>
           <small class="text-danger"><%= errors.nombre.msg %></small>
           <% } %>
-</div> -->
-<!-- <div class="mb-3 col-md-6">
+</div>
+<div class="mb-3 col-md-6">
         <label for="apellido" class="form-label">Apellido</label>
         <input type="text" name="apellido" class="form-control" id="apellido" value="<%= usuario.apellido %>">
         <% if (locals.errors && errors.apellido) { %>
@@ -50,12 +51,12 @@
   <input class="form-control" type="file" id="avatar" name="avatar" multiple>
 </div>
 <br>
-<div class="container" id="Container-admin"> -->
+<div class="container" id="Container-admin">
   <label for="pass" class="form-label">Categorias</label>
-  <select name="pass" id="pass">
-    <option value="" selected hidden>Seleccione una categoria..</option>
-    <% categorias.forEach(({id, roluser_id}) => { %>
-        <option value="<%= id %>"><%= roluser_id %> </option>
+  <select name="roluser_id" id="roluser_id">
+    <option value="<%- usuario.roluser_id %> " selected hidden><%= usuario.roluser.rol %> </option>
+    <% categorias.forEach(({id, rol}) => { %>
+        <option value="<%= id %>"><%= rol %> </option>
     <% }) %> 
   </select>
   <% if (locals.errors && errors.pass) { %>

@@ -15,6 +15,8 @@
 }
 .paginaAdm{
     color: white;
+    padding-left: 4%;
+    font-style: oblique;    
 }
 .datatableBtn{
     display: block;

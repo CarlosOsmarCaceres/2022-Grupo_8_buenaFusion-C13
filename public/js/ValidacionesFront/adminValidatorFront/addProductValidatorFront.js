@@ -138,7 +138,7 @@ $submitErrors = qs("#submitErrors")
           }
         }
       if(!errores){
-            alert("Producto Creado!")
+            //alert("Producto Creado!")
             $form.submit()
         }
     })

@@ -27,7 +27,7 @@ router.get("/", /* userSessionCheck, adminCheck, */ aControllers.index)
 router.get("/usuarios/editar/:id", /* userSessionCheck, adminCheck,  */adminUsersController.userEdit)
 router.get("/usuarios", /* userSessionCheck, adminCheck, */ adminUsersController.userList)
 //router.post("/usuarios",/* uploadFile.single("image"),productCreateValidator  ,*/ adminUsersController.userCreate)
-router.put("/usuarios/:id",uploadAvatar.single("image"),/* productEditValidator, */ adminUsersController.userEditar)
+router.put("/usuarios/:id", adminUsersController.userEditar)
 router.delete("/usuarios/:id", adminUsersController.userDelete)
 // CRUD CATEGORIA 
 router.get('/categories', /* userSessionCheck, adminCheck, */ adminCategoryController.list );
